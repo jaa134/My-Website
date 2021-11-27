@@ -33,7 +33,7 @@ const App = () => (
       </HeaderName>
       <HeaderNavigation aria-label="Jacob Alspaw">
         <HeaderMenuItem href={`#${Paths.HOME}`}>Profile</HeaderMenuItem>
-        <HeaderMenu aria-label="Experiences" menuLinkName="Experiences">
+        <HeaderMenu aria-label="Experience" menuLinkName="Experience">
           <HeaderMenuItem href={`#${Paths.EDUCATION}`}>Education</HeaderMenuItem>
           <HeaderMenuItem href={`#${Paths.SKILLS}`}>Skills</HeaderMenuItem>
           <HeaderMenuItem href={`#${Paths.PROJECTS}`}>Projects</HeaderMenuItem>
