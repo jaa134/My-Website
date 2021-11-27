@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Search20 from '@carbon/icons-react/lib/search/20';
 import Notification20 from '@carbon/icons-react/lib/notification/20';
 import AppSwitcher20 from '@carbon/icons-react/lib/app-switcher/20';
@@ -58,6 +58,7 @@ const App = () => (
         <Route path={Paths.SKILLS} element={<SkillsPage />} />
         <Route path={Paths.PROJECTS} element={<ProjectsPage />} />
         <Route path={Paths.DOCUMENTS} element={<DocumentsPage />} />
+        <Route path="*" element={<Navigate replace to={Paths.HOME} />} />
       </Routes>
     </Content>
   </div>
