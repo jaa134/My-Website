@@ -27,18 +27,22 @@ const bem = defineBlock('App');
 
 const App = () => (
   <div className={bem()}>
-    <Header aria-label="Jacob Alspaw">
-      <HeaderName className={bem('header-name')} href={`#${Paths.HOME}`} prefix="Jacob">
+    <Header className={bem('header')} aria-label="Jacob Alspaw">
+      <HeaderName href={`#${Paths.HOME}`} prefix="Jacob">
         [Alspaw]
       </HeaderName>
       <HeaderNavigation aria-label="Jacob Alspaw">
         <HeaderMenuItem href={`#${Paths.HOME}`}>Profile</HeaderMenuItem>
         <HeaderMenu aria-label="Experience" menuLinkName="Experience">
-          <HeaderMenuItem href={`#${Paths.EDUCATION}`}>Education</HeaderMenuItem>
-          <HeaderMenuItem href={`#${Paths.SKILLS}`}>Skills</HeaderMenuItem>
+          <HeaderMenuItem href={`#${Paths.SKILLS}`}>Technical skills</HeaderMenuItem>
+          <HeaderMenuItem href={`#${Paths.PROJECTS}`}>Employment</HeaderMenuItem>
           <HeaderMenuItem href={`#${Paths.PROJECTS}`}>Projects</HeaderMenuItem>
+          <HeaderMenuItem href={`#${Paths.EDUCATION}`}>Education</HeaderMenuItem>
         </HeaderMenu>
-        <HeaderMenuItem href={`#${Paths.DOCUMENTS}`}>Documents</HeaderMenuItem>
+        <HeaderMenu aria-label="Documents" menuLinkName="Documents">
+          <HeaderMenuItem href={`#${Paths.DOCUMENTS}`}>Resume</HeaderMenuItem>
+          <HeaderMenuItem href={`#${Paths.DOCUMENTS}`}>Curriculum vitae</HeaderMenuItem>
+        </HeaderMenu>
         <HeaderMenuItem href={`#${Paths.CONTACTS}`}>Contact</HeaderMenuItem>
       </HeaderNavigation>
       <HeaderGlobalBar>
