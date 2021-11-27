@@ -1,8 +1,11 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import Search20 from '@carbon/icons-react/lib/search/20';
-import Notification20 from '@carbon/icons-react/lib/notification/20';
-import AppSwitcher20 from '@carbon/icons-react/lib/app-switcher/20';
+import LocationPerson24 from '@carbon/icons-react/lib/location--person/24';
+import Phone24 from '@carbon/icons-react/lib/phone/24';
+import Email24 from '@carbon/icons-react/lib/email/24';
+import LogoGithub24 from '@carbon/icons-react/lib/logo--github/24';
+import LogoFacebook24 from '@carbon/icons-react/lib/logo--facebook/24';
+import LogoLinkedin24 from '@carbon/icons-react/lib/logo--linkedin/24';
 import {
   Content,
   Header,
@@ -46,14 +49,23 @@ const App = () => (
         <HeaderMenuItem href={`#${Paths.CONTACTS}`}>Contact</HeaderMenuItem>
       </HeaderNavigation>
       <HeaderGlobalBar>
-        <HeaderGlobalAction aria-label="Search" onClick={() => {}}>
-          <Search20 />
+        <HeaderGlobalAction aria-label="Location" onClick={() => {}}>
+          <LocationPerson24 />
         </HeaderGlobalAction>
-        <HeaderGlobalAction aria-label="Notifications" onClick={() => {}}>
-          <Notification20 />
+        <HeaderGlobalAction aria-label="Phone" onClick={() => {}}>
+          <Phone24 />
         </HeaderGlobalAction>
-        <HeaderGlobalAction aria-label="App Switcher" onClick={() => {}}>
-          <AppSwitcher20 />
+        <HeaderGlobalAction aria-label="Email" onClick={() => {}}>
+          <Email24 />
+        </HeaderGlobalAction>
+        <HeaderGlobalAction aria-label="Github" onClick={() => {}}>
+          <LogoGithub24 />
+        </HeaderGlobalAction>
+        <HeaderGlobalAction aria-label="Facebook" onClick={() => {}}>
+          <LogoFacebook24 />
+        </HeaderGlobalAction>
+        <HeaderGlobalAction aria-label="LinkedIn" onClick={() => {}}>
+          <LogoLinkedin24 />
         </HeaderGlobalAction>
       </HeaderGlobalBar>
     </Header>
