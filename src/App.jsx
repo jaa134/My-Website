@@ -20,6 +20,7 @@ import EducationPage from './modules/education/EducationPage';
 import SkillsPage from './modules/skills/SkillsPage';
 import ProjectsPage from './modules/projects/ProjectsPage';
 import DocumentsPage from './modules/documents/DocumentsPage';
+import ContactsPage from './modules/contacts/ContactsPage';
 import './App.scss';
 
 const bem = defineBlock('App');
@@ -31,13 +32,14 @@ const App = () => (
         [Alspaw]
       </HeaderName>
       <HeaderNavigation aria-label="Jacob Alspaw">
-        <HeaderMenuItem href={`#${Paths.HOME}`}>About</HeaderMenuItem>
-        <HeaderMenu aria-label="Experience" menuLinkName="Experience">
+        <HeaderMenuItem href={`#${Paths.HOME}`}>Profile</HeaderMenuItem>
+        <HeaderMenu aria-label="Experiences" menuLinkName="Experiences">
           <HeaderMenuItem href={`#${Paths.EDUCATION}`}>Education</HeaderMenuItem>
           <HeaderMenuItem href={`#${Paths.SKILLS}`}>Skills</HeaderMenuItem>
           <HeaderMenuItem href={`#${Paths.PROJECTS}`}>Projects</HeaderMenuItem>
-          <HeaderMenuItem href={`#${Paths.DOCUMENTS}`}>Documents</HeaderMenuItem>
         </HeaderMenu>
+        <HeaderMenuItem href={`#${Paths.DOCUMENTS}`}>Documents</HeaderMenuItem>
+        <HeaderMenuItem href={`#${Paths.CONTACTS}`}>Contact</HeaderMenuItem>
       </HeaderNavigation>
       <HeaderGlobalBar>
         <HeaderGlobalAction aria-label="Search" onClick={() => {}}>
@@ -58,6 +60,7 @@ const App = () => (
         <Route path={Paths.SKILLS} element={<SkillsPage />} />
         <Route path={Paths.PROJECTS} element={<ProjectsPage />} />
         <Route path={Paths.DOCUMENTS} element={<DocumentsPage />} />
+        <Route path={Paths.CONTACTS} element={<ContactsPage />} />
         <Route path="*" element={<Navigate replace to={Paths.HOME} />} />
       </Routes>
     </Content>

@@ -3,7 +3,8 @@ export const Paths = {
   EDUCATION: '/education',
   SKILLS: '/skills',
   PROJECTS: '/projects',
-  DOCUMENTS: '/documents'
+  DOCUMENTS: '/documents',
+  CONTACTS: '/contacts'
 };
 
 export const Documents = {
