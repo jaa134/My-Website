@@ -1,3 +1,4 @@
+import { Button } from 'carbon-components-react';
 import './App.scss';
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          <Button>Hello React!</Button>
         </a>
       </header>
     </div>
