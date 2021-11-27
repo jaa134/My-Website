@@ -14,6 +14,7 @@ import {
   HeaderMenuItem
 } from 'carbon-components-react/lib/components/UIShell';
 import { Paths } from './constants';
+import defineBlock from './utils/defineBlock';
 import HomePage from './modules/home/HomePage';
 import EducationPage from './modules/education/EducationPage';
 import SkillsPage from './modules/skills/SkillsPage';
@@ -21,13 +22,15 @@ import ProjectsPage from './modules/projects/ProjectsPage';
 import DocumentsPage from './modules/documents/DocumentsPage';
 import './App.scss';
 
+const bem = defineBlock('App');
+
 const App = () => (
-  <div className="App">
-    <Header aria-label="IBM Platform Name">
-      <HeaderName href={`#${Paths.HOME}`} prefix="IBM">
-        [Platform]
+  <div className={bem()}>
+    <Header aria-label="Jacob Alspaw">
+      <HeaderName className={bem('header-name')} href={`#${Paths.HOME}`} prefix="Jacob">
+        [Alspaw]
       </HeaderName>
-      <HeaderNavigation aria-label="IBM [Platform]">
+      <HeaderNavigation aria-label="Jacob Alspaw">
         <HeaderMenuItem href={`#${Paths.HOME}`}>About</HeaderMenuItem>
         <HeaderMenu aria-label="Experience" menuLinkName="Experience">
           <HeaderMenuItem href={`#${Paths.EDUCATION}`}>Education</HeaderMenuItem>

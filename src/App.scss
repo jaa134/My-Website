@@ -1,2 +1,7 @@
+@import './colors.scss';
+
 .App {
+  &__header-name.bx--header__name {
+    font-size: 1.125rem;
+  }
 }
