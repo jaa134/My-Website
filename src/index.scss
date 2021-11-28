@@ -1,8 +1,8 @@
 @import '~carbon-components/scss/globals/scss/styles.scss';
-@import './colors.scss';
+@import '@carbon/colors/scss/colors';
 
 html {
-  background-color: $background-01;
+  background-color: $ui-01;
 }
 
 body {
@@ -11,5 +11,5 @@ body {
 }
 
 #main-content {
-  background-color: $background-01;
+  background-color: $ui-01;
 }
