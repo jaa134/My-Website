@@ -1,9 +1,17 @@
 import React from 'react';
-import { Button } from 'carbon-components-react';
+import defineBlock from '../../utils/defineBlock';
 import './HomePage.scss';
 
+const bem = defineBlock('HomePage');
+
 const HomePage = () => (
-  <Button>Home!</Button>
+  <div className={bem()}>
+    <img
+      className={bem('profile-image')}
+      src="/profile-circle--small.png"
+      alt="profile"
+    />
+  </div>
 );
 
 export default HomePage;

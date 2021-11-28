@@ -1,3 +1,9 @@
 .HomePage {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__profile-image {
+    width: 20rem;
+    height: 20rem;
+  }
 }

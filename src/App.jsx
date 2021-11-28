@@ -59,6 +59,11 @@ const App = () => {
                 onClick={onClickSideNavExpand}
                 isActive={isSideNavExpanded}
               />
+              <img
+                className={bem('profile-image')}
+                src="/profile-circle--small.png"
+                alt="profile"
+              />
               <HeaderName href="#" prefix="Jacob">
                 [Alspaw]
               </HeaderName>
