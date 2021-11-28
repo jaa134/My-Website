@@ -10,5 +10,20 @@
         color: rgb(230, 230, 230)
       }
     }
+    .bx--side-nav__icon:not(.bx--side-nav__submenu-chevron) svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+    .bx--switcher__item {
+      height: 3rem;
+      &-link {
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        svg {
+          margin-right: 1rem;
+        }
+      }
+    }
   }
 }

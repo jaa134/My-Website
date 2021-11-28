@@ -1,10 +1,10 @@
 export const Paths = {
-  HOME: '/',
+  HOME: '',
   EDUCATION: '/education',
   SKILLS: '/skills',
   PROJECTS: '/projects',
   DOCUMENTS: '/documents',
-  CONTACTS: '/contacts'
+  CONTACT: '/contact'
 };
 
 export const Documents = {

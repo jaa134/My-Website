@@ -1,20 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import LocationPerson24 from '@carbon/icons-react/lib/location--person/24';
-import Phone24 from '@carbon/icons-react/lib/phone/24';
-import Email24 from '@carbon/icons-react/lib/email/24';
+import LocationPerson20 from '@carbon/icons-react/lib/location--person/20';
+import UserAvatar20 from '@carbon/icons-react/lib/user--avatar/20';
+import Cognitive20 from '@carbon/icons-react/lib/cognitive/20';
+import Document20 from '@carbon/icons-react/lib/document/20';
+import Chat20 from '@carbon/icons-react/lib/chat/20';
+import Phone20 from '@carbon/icons-react/lib/phone/20';
+import Email20 from '@carbon/icons-react/lib/email/20';
+import AppSwitcher20 from '@carbon/icons-react/lib/app-switcher/20';
+import LogoLinkedin24 from '@carbon/icons-react/lib/logo--linkedin/24';
 import LogoGithub24 from '@carbon/icons-react/lib/logo--github/24';
 import LogoFacebook24 from '@carbon/icons-react/lib/logo--facebook/24';
-import LogoLinkedin24 from '@carbon/icons-react/lib/logo--linkedin/24';
+import LogoInstagram24 from '@carbon/icons-react/lib/logo--instagram/24';
+import HeaderContainer from 'carbon-components-react/lib/components/UIShell/HeaderContainer';
 import {
   Content,
   Header,
+  HeaderMenuButton,
   HeaderName,
-  HeaderGlobalAction,
   HeaderGlobalBar,
-  HeaderNavigation,
-  HeaderMenu,
-  HeaderMenuItem
+  HeaderGlobalAction,
+  HeaderPanel,
+  Switcher,
+  SwitcherItem,
+  SkipToContent,
+  SideNav,
+  SideNavItems,
+  SideNavLink,
+  SideNavMenu,
+  SideNavMenuItem
 } from 'carbon-components-react/lib/components/UIShell';
 import { Paths } from './constants';
 import defineBlock from './utils/defineBlock';
@@ -28,59 +42,110 @@ import './App.scss';
 
 const bem = defineBlock('App');
 
-const App = () => (
-  <div className={bem()}>
-    <Header className={bem('header')} aria-label="Jacob Alspaw">
-      <HeaderName href={`#${Paths.HOME}`} prefix="Jacob">
-        [Alspaw]
-      </HeaderName>
-      <HeaderNavigation aria-label="Jacob Alspaw">
-        <HeaderMenuItem href={`#${Paths.HOME}`}>Profile</HeaderMenuItem>
-        <HeaderMenu aria-label="Experience" menuLinkName="Experience">
-          <HeaderMenuItem href={`#${Paths.SKILLS}`}>Technical skills</HeaderMenuItem>
-          <HeaderMenuItem href={`#${Paths.PROJECTS}`}>Employment</HeaderMenuItem>
-          <HeaderMenuItem href={`#${Paths.PROJECTS}`}>Projects</HeaderMenuItem>
-          <HeaderMenuItem href={`#${Paths.EDUCATION}`}>Education</HeaderMenuItem>
-        </HeaderMenu>
-        <HeaderMenu aria-label="Documents" menuLinkName="Documents">
-          <HeaderMenuItem href={`#${Paths.DOCUMENTS}`}>Resume</HeaderMenuItem>
-          <HeaderMenuItem href={`#${Paths.DOCUMENTS}`}>Curriculum vitae</HeaderMenuItem>
-        </HeaderMenu>
-        <HeaderMenuItem href={`#${Paths.CONTACTS}`}>Contact</HeaderMenuItem>
-      </HeaderNavigation>
-      <HeaderGlobalBar>
-        <HeaderGlobalAction aria-label="Location" onClick={() => {}}>
-          <LocationPerson24 />
-        </HeaderGlobalAction>
-        <HeaderGlobalAction aria-label="Phone" onClick={() => {}}>
-          <Phone24 />
-        </HeaderGlobalAction>
-        <HeaderGlobalAction aria-label="Email" onClick={() => {}}>
-          <Email24 />
-        </HeaderGlobalAction>
-        <HeaderGlobalAction aria-label="Github" onClick={() => {}}>
-          <LogoGithub24 />
-        </HeaderGlobalAction>
-        <HeaderGlobalAction aria-label="Facebook" onClick={() => {}}>
-          <LogoFacebook24 />
-        </HeaderGlobalAction>
-        <HeaderGlobalAction aria-label="LinkedIn" onClick={() => {}}>
-          <LogoLinkedin24 />
-        </HeaderGlobalAction>
-      </HeaderGlobalBar>
-    </Header>
-    <Content id="main-content">
-      <Routes>
-        <Route path={Paths.HOME} element={<HomePage />} exact />
-        <Route path={Paths.EDUCATION} element={<EducationPage />} />
-        <Route path={Paths.SKILLS} element={<SkillsPage />} />
-        <Route path={Paths.PROJECTS} element={<ProjectsPage />} />
-        <Route path={Paths.DOCUMENTS} element={<DocumentsPage />} />
-        <Route path={Paths.CONTACTS} element={<ContactsPage />} />
-        <Route path="*" element={<Navigate replace to={Paths.HOME} />} />
-      </Routes>
-    </Content>
-  </div>
-);
+const App = () => {
+  const [rightPanelExpanded, setRightPanelExpanded] = useState(false);
+  const toggleRightPanel = () => {
+    setRightPanelExpanded(!rightPanelExpanded);
+  };
+  return (
+    <div className={bem()}>
+      <HeaderContainer
+        render={({ isSideNavExpanded, onClickSideNavExpand }) => (
+          <>
+            <Header className={bem('header')} aria-label="Jacob Alspaw">
+              <SkipToContent />
+              <HeaderMenuButton
+                aria-label="Open menu"
+                onClick={onClickSideNavExpand}
+                isActive={isSideNavExpanded}
+              />
+              <HeaderName href="#" prefix="Jacob">
+                [Alspaw]
+              </HeaderName>
+              <HeaderGlobalBar>
+                <HeaderGlobalAction aria-label="Location" onClick={() => {}}>
+                  <LocationPerson20 />
+                </HeaderGlobalAction>
+                <HeaderGlobalAction aria-label="Phone" onClick={() => {}}>
+                  <Phone20 />
+                </HeaderGlobalAction>
+                <HeaderGlobalAction aria-label="Email" onClick={() => {}}>
+                  <Email20 />
+                </HeaderGlobalAction>
+                <HeaderGlobalAction
+                  aria-label="Applications"
+                  tooltipAlignment="end"
+                  isActive={rightPanelExpanded}
+                  onClick={toggleRightPanel}
+                >
+                  <AppSwitcher20 />
+                </HeaderGlobalAction>
+              </HeaderGlobalBar>
+              <SideNav aria-label="Side navigation" expanded={isSideNavExpanded}>
+                <SideNavItems>
+                  <SideNavLink large renderIcon={UserAvatar20} href={`#${Paths.HOME}`}>
+                    Profile
+                  </SideNavLink>
+                  <SideNavMenu large renderIcon={Cognitive20} title="Experience">
+                    <SideNavMenuItem href={`#${Paths.SKILLS}`}>
+                      Technical skills
+                    </SideNavMenuItem>
+                    <SideNavMenuItem href={`#${Paths.PROJECTS}`}>
+                      Employment
+                    </SideNavMenuItem>
+                    <SideNavMenuItem href={`#${Paths.PROJECTS}`}>
+                      Projects
+                    </SideNavMenuItem>
+                    <SideNavMenuItem href={`#${Paths.EDUCATION}`}>
+                      Education
+                    </SideNavMenuItem>
+                  </SideNavMenu>
+                  <SideNavMenu large renderIcon={Document20} title="Documents">
+                    <SideNavMenuItem href={`#${Paths.DOCUMENTS}`}>
+                      Resume
+                    </SideNavMenuItem>
+                    <SideNavMenuItem href={`#${Paths.DOCUMENTS}`}>
+                      Curriculum vitae
+                    </SideNavMenuItem>
+                  </SideNavMenu>
+                  <SideNavLink large renderIcon={Chat20} href={`#${Paths.CONTACT}`}>
+                    Contact
+                  </SideNavLink>
+                </SideNavItems>
+              </SideNav>
+              <HeaderPanel aria-label="Header panel" expanded={rightPanelExpanded}>
+                <Switcher aria-label="Switcher container">
+                  <SwitcherItem aria-label="Linkedin" href="#">
+                    <LogoLinkedin24 /> Linkedin
+                  </SwitcherItem>
+                  <SwitcherItem aria-label="Github" href="#">
+                    <LogoGithub24 /> Github
+                  </SwitcherItem>
+                  <SwitcherItem aria-label="Facebook" href="#">
+                    <LogoFacebook24 /> Facebook
+                  </SwitcherItem>
+                  <SwitcherItem aria-label="Instagram" href="#">
+                    <LogoInstagram24 /> Instagram
+                  </SwitcherItem>
+                </Switcher>
+              </HeaderPanel>
+            </Header>
+            <Content id="main-content">
+              <Routes>
+                <Route path={Paths.HOME} element={<HomePage />} exact />
+                <Route path={Paths.EDUCATION} element={<EducationPage />} />
+                <Route path={Paths.SKILLS} element={<SkillsPage />} />
+                <Route path={Paths.PROJECTS} element={<ProjectsPage />} />
+                <Route path={Paths.DOCUMENTS} element={<DocumentsPage />} />
+                <Route path={Paths.CONTACTS} element={<ContactsPage />} />
+                <Route path="*" element={<Navigate replace to={Paths.HOME} />} />
+              </Routes>
+            </Content>
+          </>
+        )}
+      />
+    </div>
+  );
+};
 
 export default App;
