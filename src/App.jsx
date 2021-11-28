@@ -35,7 +35,7 @@ import {
   SideNavMenu,
   SideNavMenuItem
 } from 'carbon-components-react/lib/components/UIShell';
-import { Paths } from './constants';
+import { Paths, Links } from './constants';
 import defineBlock from './utils/defineBlock';
 import { isPathMatch } from './utils/pathUtils';
 import HomePage from './modules/home/HomePage';
@@ -137,16 +137,16 @@ const App = () => {
               </SideNav>
               <HeaderPanel aria-label="Header panel" expanded={rightPanelExpanded}>
                 <Switcher aria-label="Switcher container">
-                  <SwitcherItem aria-label="Linkedin" href="#">
+                  <SwitcherItem aria-label="Linkedin" target="_blank" href={Links.LINKEDIN}>
                     <LogoLinkedin24 /> Linkedin
                   </SwitcherItem>
-                  <SwitcherItem aria-label="Github" href="#">
+                  <SwitcherItem aria-label="Github" target="_blank" href={Links.GITHUB}>
                     <LogoGithub24 /> Github
                   </SwitcherItem>
-                  <SwitcherItem aria-label="Facebook" href="#">
+                  <SwitcherItem aria-label="Facebook" target="_blank" href={Links.FACEBOOK}>
                     <LogoFacebook24 /> Facebook
                   </SwitcherItem>
-                  <SwitcherItem aria-label="Instagram" href="#">
+                  <SwitcherItem aria-label="Instagram" target="_blank" href={Links.INSTAGRAM}>
                     <LogoInstagram24 /> Instagram
                   </SwitcherItem>
                 </Switcher>
