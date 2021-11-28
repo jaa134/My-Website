@@ -137,7 +137,7 @@ const App = () => {
                 <Route path={Paths.SKILLS} element={<SkillsPage />} />
                 <Route path={Paths.PROJECTS} element={<ProjectsPage />} />
                 <Route path={Paths.DOCUMENTS} element={<DocumentsPage />} />
-                <Route path={Paths.CONTACTS} element={<ContactsPage />} />
+                <Route path={Paths.CONTACT} element={<ContactsPage />} />
                 <Route path="*" element={<Navigate replace to={Paths.HOME} />} />
               </Routes>
             </Content>
