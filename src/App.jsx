@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import {
+  Routes,
+  Route,
+  Navigate,
+  useLocation
+} from 'react-router-dom';
 import LocationPerson20 from '@carbon/icons-react/lib/location--person/20';
 import UserAvatar20 from '@carbon/icons-react/lib/user--avatar/20';
 import Cognitive20 from '@carbon/icons-react/lib/cognitive/20';
@@ -32,6 +37,7 @@ import {
 } from 'carbon-components-react/lib/components/UIShell';
 import { Paths } from './constants';
 import defineBlock from './utils/defineBlock';
+import { isPathMatch } from './utils/pathUtils';
 import HomePage from './modules/home/HomePage';
 import EducationPage from './modules/education/EducationPage';
 import SkillsPage from './modules/skills/SkillsPage';
@@ -43,6 +49,7 @@ import './App.scss';
 const bem = defineBlock('App');
 
 const App = () => {
+  const location = useLocation();
   const [rightPanelExpanded, setRightPanelExpanded] = useState(false);
   const toggleRightPanel = () => {
     setRightPanelExpanded(!rightPanelExpanded);
@@ -88,32 +95,42 @@ const App = () => {
               </HeaderGlobalBar>
               <SideNav aria-label="Side navigation" expanded={isSideNavExpanded}>
                 <SideNavItems>
-                  <SideNavLink large renderIcon={UserAvatar20} href={`#${Paths.HOME}`}>
+                  <SideNavLink
+                    large
+                    renderIcon={UserAvatar20}
+                    href={`#${Paths.HOME}`}
+                    isActive={isPathMatch(Paths.HOME, location.pathname)}
+                  >
                     Profile
                   </SideNavLink>
                   <SideNavMenu large renderIcon={Cognitive20} title="Experience">
-                    <SideNavMenuItem href={`#${Paths.SKILLS}`}>
+                    <SideNavMenuItem href={`#${Paths.SKILLS}`} isActive={isPathMatch(Paths.SKILLS, location.pathname)}>
                       Technical skills
                     </SideNavMenuItem>
-                    <SideNavMenuItem href={`#${Paths.PROJECTS}`}>
+                    <SideNavMenuItem href={`#${Paths.PROJECTS}`} isActive={isPathMatch(Paths.PROJECTS, location.pathname)}>
                       Employment
                     </SideNavMenuItem>
-                    <SideNavMenuItem href={`#${Paths.PROJECTS}`}>
+                    <SideNavMenuItem href={`#${Paths.PROJECTS}`} isActive={isPathMatch(Paths.PROJECTS, location.pathname)}>
                       Projects
                     </SideNavMenuItem>
-                    <SideNavMenuItem href={`#${Paths.EDUCATION}`}>
+                    <SideNavMenuItem href={`#${Paths.EDUCATION}`} isActive={isPathMatch(Paths.EDUCATION, location.pathname)}>
                       Education
                     </SideNavMenuItem>
                   </SideNavMenu>
                   <SideNavMenu large renderIcon={Document20} title="Documents">
-                    <SideNavMenuItem href={`#${Paths.DOCUMENTS}`}>
+                    <SideNavMenuItem href={`#${Paths.DOCUMENTS}`} isActive={isPathMatch(Paths.DOCUMENTS, location.pathname)}>
                       Resume
                     </SideNavMenuItem>
-                    <SideNavMenuItem href={`#${Paths.DOCUMENTS}`}>
+                    <SideNavMenuItem href={`#${Paths.DOCUMENTS}`} isActive={isPathMatch(Paths.DOCUMENTS, location.pathname)}>
                       Curriculum vitae
                     </SideNavMenuItem>
                   </SideNavMenu>
-                  <SideNavLink large renderIcon={Chat20} href={`#${Paths.CONTACT}`}>
+                  <SideNavLink
+                    large
+                    renderIcon={Chat20}
+                    href={`#${Paths.CONTACT}`}
+                    isActive={isPathMatch(Paths.CONTACT, location.pathname)}
+                  >
                     Contact
                   </SideNavLink>
                 </SideNavItems>
