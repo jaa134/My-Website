@@ -1,9 +1,9 @@
 import React from 'react';
-import { Button } from 'carbon-components-react';
+import Construction from '../../Construction';
 import './CvPage.scss';
 
 const CvPage = () => (
-  <Button>Cv!</Button>
+  <Construction title="Curriculum vitae" />
 );
 
 export default CvPage;

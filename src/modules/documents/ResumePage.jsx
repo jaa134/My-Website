@@ -1,9 +1,9 @@
 import React from 'react';
-import { Button } from 'carbon-components-react';
+import Construction from '../../Construction';
 import './ResumePage.scss';
 
 const ResumePage = () => (
-  <Button>Documents!</Button>
+  <Construction title="Resume" />
 );
 
 export default ResumePage;

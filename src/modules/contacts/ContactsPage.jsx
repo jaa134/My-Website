@@ -1,9 +1,9 @@
 import React from 'react';
-import { Button } from 'carbon-components-react';
+import Construction from '../../Construction';
 import './ContactsPage.scss';
 
 const ContactsPage = () => (
-  <Button>Contacts!</Button>
+  <Construction title="Contacts" />
 );
 
 export default ContactsPage;
