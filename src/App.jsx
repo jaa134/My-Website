@@ -17,6 +17,7 @@ import LogoLinkedin24 from '@carbon/icons-react/lib/logo--linkedin/24';
 import LogoGithub24 from '@carbon/icons-react/lib/logo--github/24';
 import LogoFacebook24 from '@carbon/icons-react/lib/logo--facebook/24';
 import LogoInstagram24 from '@carbon/icons-react/lib/logo--instagram/24';
+import LogoTwitter24 from '@carbon/icons-react/lib/logo--twitter/24';
 import HeaderContainer from 'carbon-components-react/lib/components/UIShell/HeaderContainer';
 import {
   Content,
@@ -39,10 +40,12 @@ import { Paths, Links } from './constants';
 import defineBlock from './utils/defineBlock';
 import { isPathMatch } from './utils/pathUtils';
 import HomePage from './modules/home/HomePage';
-import EducationPage from './modules/education/EducationPage';
 import SkillsPage from './modules/skills/SkillsPage';
+import EmploymentPage from './modules/employment/EmploymentPage';
 import ProjectsPage from './modules/projects/ProjectsPage';
-import DocumentsPage from './modules/documents/DocumentsPage';
+import EducationPage from './modules/education/EducationPage';
+import ResumePage from './modules/documents/ResumePage';
+import CvPage from './modules/documents/CvPage';
 import ContactsPage from './modules/contacts/ContactsPage';
 import './App.scss';
 
@@ -107,7 +110,7 @@ const App = () => {
                     <SideNavMenuItem href={`#${Paths.SKILLS}`} isActive={isPathMatch(Paths.SKILLS, location.pathname)}>
                       Technical skills
                     </SideNavMenuItem>
-                    <SideNavMenuItem href={`#${Paths.PROJECTS}`} isActive={isPathMatch(Paths.PROJECTS, location.pathname)}>
+                    <SideNavMenuItem href={`#${Paths.EMPLOYMENT}`} isActive={isPathMatch(Paths.EMPLOYMENT, location.pathname)}>
                       Employment
                     </SideNavMenuItem>
                     <SideNavMenuItem href={`#${Paths.PROJECTS}`} isActive={isPathMatch(Paths.PROJECTS, location.pathname)}>
@@ -118,10 +121,10 @@ const App = () => {
                     </SideNavMenuItem>
                   </SideNavMenu>
                   <SideNavMenu large renderIcon={Document20} title="Documents">
-                    <SideNavMenuItem href={`#${Paths.DOCUMENTS}`} isActive={isPathMatch(Paths.DOCUMENTS, location.pathname)}>
+                    <SideNavMenuItem href={`#${Paths.RESUME}`} isActive={isPathMatch(Paths.RESUME, location.pathname)}>
                       Resume
                     </SideNavMenuItem>
-                    <SideNavMenuItem href={`#${Paths.DOCUMENTS}`} isActive={isPathMatch(Paths.DOCUMENTS, location.pathname)}>
+                    <SideNavMenuItem href={`#${Paths.CV}`} isActive={isPathMatch(Paths.CV, location.pathname)}>
                       Curriculum vitae
                     </SideNavMenuItem>
                   </SideNavMenu>
@@ -149,16 +152,21 @@ const App = () => {
                   <SwitcherItem aria-label="Instagram" target="_blank" href={Links.INSTAGRAM}>
                     <LogoInstagram24 /> Instagram
                   </SwitcherItem>
+                  <SwitcherItem aria-label="Twitter" target="_blank" href={Links.TWITTER}>
+                    <LogoTwitter24 /> Twitter
+                  </SwitcherItem>
                 </Switcher>
               </HeaderPanel>
             </Header>
             <Content id="main-content">
               <Routes>
                 <Route path={Paths.HOME} element={<HomePage />} exact />
-                <Route path={Paths.EDUCATION} element={<EducationPage />} />
                 <Route path={Paths.SKILLS} element={<SkillsPage />} />
+                <Route path={Paths.EMPLOYMENT} element={<EmploymentPage />} />
                 <Route path={Paths.PROJECTS} element={<ProjectsPage />} />
-                <Route path={Paths.DOCUMENTS} element={<DocumentsPage />} />
+                <Route path={Paths.EDUCATION} element={<EducationPage />} />
+                <Route path={Paths.RESUME} element={<ResumePage />} />
+                <Route path={Paths.CV} element={<CvPage />} />
                 <Route path={Paths.CONTACT} element={<ContactsPage />} />
                 <Route path="*" element={<Navigate replace to={Paths.HOME} />} />
               </Routes>

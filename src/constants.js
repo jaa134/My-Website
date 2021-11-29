@@ -1,17 +1,20 @@
 export const Paths = {
   HOME: '/',
-  EDUCATION: '/education',
   SKILLS: '/skills',
+  EMPLOYMENT: '/employment',
   PROJECTS: '/projects',
-  DOCUMENTS: '/documents',
+  EDUCATION: '/education',
+  RESUME: '/resume',
+  CV: '/cv',
   CONTACT: '/contact'
 };
 
 export const Links = {
   LINKEDIN: 'https://www.linkedin.com/in/jacob-alspaw',
   GITHUB: 'https://github.com/jaa134',
-  FACEBOOK: 'https://www.facebook.com/jacobalexander.alspaw/',
-  INSTAGRAM: 'https://www.instagram.com/jacobalspaw/'
+  FACEBOOK: 'https://www.facebook.com/jacobalexander.alspaw',
+  INSTAGRAM: 'https://www.instagram.com/jacobalspaw',
+  TWITTER: 'https://www.twitter.com'
 };
 
 export const Documents = {

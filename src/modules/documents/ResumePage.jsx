@@ -1,9 +1,9 @@
 import React from 'react';
 import { Button } from 'carbon-components-react';
-import './DocumentsPage.scss';
+import './ResumePage.scss';
 
-const DocumentsPage = () => (
+const ResumePage = () => (
   <Button>Documents!</Button>
 );
 
-export default DocumentsPage;
+export default ResumePage;
