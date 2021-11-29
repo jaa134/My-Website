@@ -14,7 +14,7 @@ export const Links = {
   GITHUB: 'https://github.com/jaa134',
   FACEBOOK: 'https://www.facebook.com/jacobalexander.alspaw',
   INSTAGRAM: 'https://www.instagram.com/jacobalspaw',
-  TWITTER: 'https://www.twitter.com'
+  TWITTER: 'https://twitter.com/JacobAlspaw'
 };
 
 export const Documents = {
