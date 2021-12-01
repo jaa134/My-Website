@@ -71,7 +71,7 @@ const App = () => (
               />
               <img
                 className={bem('profile-image')}
-                src="/profile-circle--small.png"
+                src="images/profile-circle--small.png"
                 alt="profile"
               />
               <HeaderName href="#" prefix="Jacob">

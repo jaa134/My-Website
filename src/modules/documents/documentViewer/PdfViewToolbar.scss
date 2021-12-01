@@ -1,0 +1,11 @@
+@import '@carbon/colors/scss/colors';
+
+.PdfViewToolbar {
+  position: sticky;
+  top: 3rem;
+  z-index: 1000;
+  height: 4rem;
+  width: 100%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  background-color: $ibm-color__gray-50;
+}
