@@ -32,9 +32,10 @@ const PdfView = ({
   const onDocLoadError = () => {
     setHasError(true);
   };
+  const documentUrl = `documents/${docName}`;
   return (
     <div className={bem()}>
-      <PdfViewToolbar />
+      <PdfViewToolbar documentUrl={documentUrl} numPages={numPages} />
       <SizeMe
         monitorWidth
         refreshRate={128}
@@ -42,13 +43,18 @@ const PdfView = ({
       >
         {({ size }) => {
           const { width, height } = getPdfSize(size.width);
-          const totalHeight = (numPages * height)
-            + ((numPages - 1) * PDF_SPACING)
-            + PDF_PADDING;
+          let mainStyle;
+          if (!hasError) {
+            mainStyle = {
+              height: (numPages * height)
+                + ((numPages - 1) * PDF_SPACING)
+                + PDF_PADDING
+            };
+          }
           return (
-            <div style={{ height: hasError ? 'unset' : totalHeight }}>
+            <div style={mainStyle}>
               <Document
-                file={`documents/${docName}`}
+                file={documentUrl}
                 loading={<PdfViewLoading numPages={numPages} width={width} height={height} />}
                 error={<PdfViewError />}
                 onLoadError={onDocLoadError}
