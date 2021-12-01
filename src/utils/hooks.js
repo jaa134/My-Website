@@ -19,3 +19,35 @@ export function useWindowWidth() {
   useEventListener(window, 'resize', getWindowWidth);
   return windowWidth;
 }
+
+export function useDocument(url) {
+  const [result, setResult] = useState({
+    loading: true,
+    error: null,
+    blob: null
+  });
+
+  useEffect(() => {
+    const controller = new AbortController();
+    fetch(url, { signal: controller.signal })
+      .then((res) => res.blob())
+      .then((blob) => {
+        setResult({
+          loading: false,
+          error: null,
+          blob
+        });
+      })
+      .catch((error) => {
+        if (error.name !== 'AbortError') {
+          setResult({
+            loading: false,
+            error,
+            blob: null
+          });
+        }
+      });
+    return () => controller.abort();
+  }, []);
+  return result;
+}

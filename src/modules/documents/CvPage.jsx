@@ -6,7 +6,7 @@ import './ResumePage.scss';
 
 const ResumePage = () => (
   <PageBase title="Curriculum vitae">
-    <PdfView documentUrl={Documents.CV} />
+    <PdfView document={Documents.CV} />
   </PageBase>
 );
 

@@ -18,6 +18,12 @@ export const Links = {
 };
 
 export const Documents = {
-  RESUME: 'Alspaw-Jacob Resume.pdf',
-  CV: 'Alspaw-Jacob CV.pdf'
+  RESUME: {
+    name: 'Alspaw-Jacob Resume.pdf',
+    numPages: 1
+  },
+  CV: {
+    name: 'Alspaw-Jacob CV.pdf',
+    numPages: 3
+  }
 };

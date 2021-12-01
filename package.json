@@ -83,8 +83,8 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "lint": "eslint src/**/*.js src/**/*.jsx",
-    "lint-fix": "eslint src/**/*.js src/**/*.jsx --fix"
+    "lint": "eslint src --ext .js,.jsx",
+    "lint-fix": "eslint src --ext .js,.jsx --fix"
   },
   "eslintConfig": {
     "extends": [

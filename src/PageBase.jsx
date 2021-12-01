@@ -12,19 +12,18 @@ const PageBase = ({
 }) => (
   <div className={bem()}>
     <h1 className={bem('title')}>{title}</h1>
+    <InlineNotification
+      className={bem('construction-notification')}
+      kind="info"
+      title="Heads up!"
+      subtitle="This page is still being developed."
+      statusIconDescription="Information"
+      role="alert"
+      hideCloseButton
+      lowContrast
+    />
     <div className={bem('content')}>
-      {children || (
-        <InlineNotification
-          className={bem('construction-notification')}
-          kind="info"
-          title="Heads up!"
-          subtitle="This page is actively being developed."
-          statusIconDescription="Information"
-          role="alert"
-          hideCloseButton
-          lowContrast
-        />
-      )}
+      {children}
     </div>
   </div>
 );

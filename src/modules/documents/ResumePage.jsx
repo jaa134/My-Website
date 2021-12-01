@@ -6,7 +6,7 @@ import './ResumePage.scss';
 
 const ResumePage = () => (
   <PageBase title="Resume">
-    <PdfView documentUrl={Documents.RESUME} />
+    <PdfView document={Documents.RESUME} />
   </PageBase>
 );
 

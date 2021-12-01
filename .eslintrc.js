@@ -21,8 +21,9 @@ module.exports = {
     'jest'
   ],
   rules: {
-    'react/jsx-one-expression-per-line': 'off',
     'comma-dangle': ['error', 'never'],
+    'no-console': ['error', { 'allow': ['error'] }],
+    'react/jsx-one-expression-per-line': 'off',
     'react/function-component-definition': ['error', {
       namedComponents: 'arrow-function',
       unnamedComponents: 'arrow-function',
