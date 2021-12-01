@@ -18,4 +18,6 @@ export const Links = {
 };
 
 export const Documents = {
+  RESUME: 'Alspaw-Jacob Resume.pdf',
+  CV: 'Alspaw-Jacob CV.pdf'
 };

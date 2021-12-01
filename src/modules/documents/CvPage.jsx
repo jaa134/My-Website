@@ -1,9 +1,13 @@
 import React from 'react';
-import Construction from '../../Construction';
-import './CvPage.scss';
+import { Documents } from '../../constants';
+import PageBase from '../../PageBase';
+import PdfView from './PdfView';
+import './ResumePage.scss';
 
-const CvPage = () => (
-  <Construction title="Curriculum vitae" />
+const ResumePage = () => (
+  <PageBase title="Curriculum vitae">
+    <PdfView documentUrl={Documents.CV} />
+  </PageBase>
 );
 
-export default CvPage;
+export default ResumePage;

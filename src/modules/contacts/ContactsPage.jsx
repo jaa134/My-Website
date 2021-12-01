@@ -1,9 +1,9 @@
 import React from 'react';
-import Construction from '../../Construction';
+import PageBase from '../../PageBase';
 import './ContactsPage.scss';
 
 const ContactsPage = () => (
-  <Construction title="Contacts" />
+  <PageBase title="Contacts" />
 );
 
 export default ContactsPage;

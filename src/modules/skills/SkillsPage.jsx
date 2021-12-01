@@ -1,9 +1,9 @@
 import React from 'react';
-import Construction from '../../Construction';
+import PageBase from '../../PageBase';
 import './SkillsPage.scss';
 
 const SkillsPage = () => (
-  <Construction title="Skills" />
+  <PageBase title="Skills" />
 );
 
 export default SkillsPage;
