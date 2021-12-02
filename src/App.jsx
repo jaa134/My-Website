@@ -39,6 +39,7 @@ import {
 import { Paths, Links } from './constants';
 import defineBlock from './utils/defineBlock';
 import { isPathMatch } from './utils/pathUtils';
+import MapModal from './modules/modals/MapModal';
 import HomePage from './modules/home/HomePage';
 import SkillsPage from './modules/skills/SkillsPage';
 import EmploymentPage from './modules/employment/EmploymentPage';
@@ -60,6 +61,7 @@ const App = () => (
         const toggleRightPanel = () => {
           setRightPanelExpanded(!rightPanelExpanded);
         };
+        const [isMapModalOpen, setMapModalOpen] = useState(false);
         return (
           <>
             <Header className={bem('header')} aria-label="Jacob Alspaw">
@@ -78,7 +80,7 @@ const App = () => (
                 [Alspaw]
               </HeaderName>
               <HeaderGlobalBar>
-                <HeaderGlobalAction aria-label="Location" onClick={() => {}}>
+                <HeaderGlobalAction aria-label="Location" onClick={() => { setMapModalOpen(true); }}>
                   <LocationPerson20 />
                 </HeaderGlobalAction>
                 <HeaderGlobalAction aria-label="Phone" onClick={() => {}}>
@@ -170,6 +172,7 @@ const App = () => (
                 <Route path={Paths.CONTACT} element={<ContactsPage />} />
                 <Route path="*" element={<Navigate replace to={Paths.HOME} />} />
               </Routes>
+              <MapModal open={isMapModalOpen} close={() => { setMapModalOpen(false); }} />
             </Content>
           </>
         );
