@@ -3,7 +3,7 @@ import PageBase from '../../PageBase';
 import './SkillsPage.scss';
 
 const SkillsPage = () => (
-  <PageBase title="Skills" wip />
+  <PageBase title="Technical skills" wip />
 );
 
 export default SkillsPage;
