@@ -3,13 +3,19 @@
     display: flex;
     align-items: center;
     font-size: 2.5rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
   }
   .bx--copy-btn {
     margin-left: 0.5rem;
     svg {
       width: 1.5rem;
       height: 1.5rem;
+    }
+  }
+  .bx--inline-notification {
+    margin: 0;
+    .bx--inline-notification__title {
+      font-weight: 600;
     }
   }
 }
