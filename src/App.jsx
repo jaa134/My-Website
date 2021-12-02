@@ -40,6 +40,8 @@ import { Paths, Links } from './constants';
 import defineBlock from './utils/defineBlock';
 import { isPathMatch } from './utils/pathUtils';
 import MapModal from './modules/modals/MapModal';
+import PhoneModal from './modules/modals/PhoneModal';
+import EmailModal from './modules/modals/EmailModal';
 import HomePage from './modules/home/HomePage';
 import SkillsPage from './modules/skills/SkillsPage';
 import EmploymentPage from './modules/employment/EmploymentPage';
@@ -57,11 +59,10 @@ const App = () => (
     <HeaderContainer
       render={({ isSideNavExpanded, onClickSideNavExpand }) => {
         const location = useLocation();
-        const [rightPanelExpanded, setRightPanelExpanded] = useState(false);
-        const toggleRightPanel = () => {
-          setRightPanelExpanded(!rightPanelExpanded);
-        };
         const [isMapModalOpen, setMapModalOpen] = useState(false);
+        const [isPhoneModalOpen, setPhoneModalOpen] = useState(false);
+        const [isEmailModalOpen, setEmailModalOpen] = useState(false);
+        const [rightPanelExpanded, setRightPanelExpanded] = useState(false);
         return (
           <>
             <Header className={bem('header')} aria-label="Jacob Alspaw">
@@ -83,17 +84,17 @@ const App = () => (
                 <HeaderGlobalAction aria-label="Location" onClick={() => { setMapModalOpen(true); }}>
                   <LocationPerson20 />
                 </HeaderGlobalAction>
-                <HeaderGlobalAction aria-label="Phone" onClick={() => {}}>
+                <HeaderGlobalAction aria-label="Phone" onClick={() => { setPhoneModalOpen(true); }}>
                   <Phone20 />
                 </HeaderGlobalAction>
-                <HeaderGlobalAction aria-label="Email" onClick={() => {}}>
+                <HeaderGlobalAction aria-label="Email" onClick={() => { setEmailModalOpen(true); }}>
                   <Email20 />
                 </HeaderGlobalAction>
                 <HeaderGlobalAction
                   aria-label="Applications"
                   tooltipAlignment="end"
                   isActive={rightPanelExpanded}
-                  onClick={toggleRightPanel}
+                  onClick={() => { setRightPanelExpanded(!rightPanelExpanded); }}
                 >
                   <AppSwitcher20 />
                 </HeaderGlobalAction>
@@ -173,6 +174,8 @@ const App = () => (
                 <Route path="*" element={<Navigate replace to={Paths.HOME} />} />
               </Routes>
               <MapModal open={isMapModalOpen} close={() => { setMapModalOpen(false); }} />
+              <PhoneModal open={isPhoneModalOpen} close={() => { setPhoneModalOpen(false); }} />
+              <EmailModal open={isEmailModalOpen} close={() => { setEmailModalOpen(false); }} />
             </Content>
           </>
         );

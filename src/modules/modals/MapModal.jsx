@@ -13,7 +13,7 @@ const MapModal = ({
   <Modal
     className={bem()}
     open={open}
-    modalLabel="Littleton, Colorado"
+    modalLabel="Contact information"
     modalHeading="Where I'm located"
     primaryButtonText="Open in Google Maps"
     secondaryButtonText="Close"
