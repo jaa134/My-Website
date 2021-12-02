@@ -5,7 +5,7 @@ import PdfView from './documentViewer/PdfView';
 import './ResumePage.scss';
 
 const ResumePage = () => (
-  <PageBase title="Resume">
+  <PageBase title="Resume" wip>
     <PdfView document={Documents.RESUME} />
   </PageBase>
 );

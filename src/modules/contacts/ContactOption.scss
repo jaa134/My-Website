@@ -1,0 +1,15 @@
+$image-width: 3.5rem;
+
+.ContactOption {
+  padding: 0 0 3rem 0;
+  &__title {
+    display: flex;
+    align-items: center;
+  }
+  &__image {
+    width: $image-width;
+  }
+  &__content {
+    margin-left: $image-width;
+  }
+}

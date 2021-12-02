@@ -3,10 +3,11 @@
   @media (max-width: 65.98rem) {
     padding: 0 2rem 2rem 2rem;
   }
-  &__title {
+  &__heading {
     margin-bottom: 2rem;
   }
   &__construction-notification.bx--inline-notification {
+    margin-top: 0;
     max-width: unset;
   }
 }

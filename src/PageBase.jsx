@@ -8,20 +8,27 @@ const bem = defineBlock('PageBase');
 
 const PageBase = ({
   title,
+  subtitle,
+  wip,
   children
 }) => (
   <div className={bem()}>
-    <h1 className={bem('title')}>{title}</h1>
-    <InlineNotification
-      className={bem('construction-notification')}
-      kind="info"
-      title="Heads up!"
-      subtitle="This page is still being developed."
-      statusIconDescription="Information"
-      role="alert"
-      hideCloseButton
-      lowContrast
-    />
+    {wip && (
+      <InlineNotification
+        className={bem('construction-notification')}
+        kind="info"
+        title="Heads up!"
+        subtitle="This content is still being developed."
+        statusIconDescription="Information"
+        role="alert"
+        hideCloseButton
+        lowContrast
+      />
+    )}
+    <div className={bem('heading')}>
+      <h1 className={bem('title')}>{title}</h1>
+      {subtitle && <h4 className={bem('subtitle')}>{subtitle}</h4>}
+    </div>
     <div className={bem('content')}>
       {children}
     </div>
@@ -29,11 +36,15 @@ const PageBase = ({
 );
 
 PageBase.defaultProps = {
-  children: null
+  subtitle: null,
+  children: null,
+  wip: false
 };
 
 PageBase.propTypes = {
   title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string,
+  wip: PropTypes.bool,
   children: PropTypes.node
 };
 
