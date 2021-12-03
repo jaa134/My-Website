@@ -28,7 +28,7 @@ const PhoneModal = ({
     </div>
     <InlineNotification
       kind="info"
-      title="Hey you!"
+      title="Hey, you!"
       subtitle="Feel free to text me anytime, but please refrain from calling me during non-business hours"
       statusIconDescription="Information"
       role="alert"
