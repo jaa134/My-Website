@@ -28,7 +28,7 @@ const PdfView = ({
     numPages
   }
 }) => {
-  const [hasError, setHasError] = useState(true);
+  const [hasError, setHasError] = useState(false);
   const onDocLoadError = () => {
     setHasError(true);
   };
@@ -42,7 +42,8 @@ const PdfView = ({
         refreshMode="debounce"
       >
         {({ size }) => {
-          const { width, height } = getPdfSize(size.width);
+          const availableWidth = size.width;
+          const { width, height } = getPdfSize(availableWidth);
           let mainStyle;
           if (!hasError) {
             mainStyle = {
