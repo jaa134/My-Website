@@ -34,7 +34,9 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+### `yarn deploy`
 
+Builds the app and then copies the `build` folder content to the `My-Website-BUILD` submodule folder. This repo is setup to use web hooks with my hosting service to leverage automated deployments. Because of this configuration, anytime I push to my submodule repo, all content in this sub-directory will be dpeloyed.
 
 ### Code Splitting
 
