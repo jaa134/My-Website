@@ -13,19 +13,19 @@ const PageBase = ({
   children
 }) => (
   <div className={bem()}>
-    {wip && (
-      <InlineNotification
-        className={bem('construction-notification')}
-        kind="info"
-        title="Heads up!"
-        subtitle="This content is still being developed."
-        statusIconDescription="Information"
-        role="alert"
-        hideCloseButton
-        lowContrast
-      />
-    )}
     <div className={bem('heading')}>
+      {wip && (
+        <InlineNotification
+          className={bem('construction-notification')}
+          kind="info"
+          title="Heads up!"
+          subtitle="This content is still being developed."
+          statusIconDescription="Information"
+          role="alert"
+          hideCloseButton
+          lowContrast
+        />
+      )}
       <h1 className={bem('title')}>{title}</h1>
       {subtitle && <h4 className={bem('subtitle')}>{subtitle}</h4>}
     </div>

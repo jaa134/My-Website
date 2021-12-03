@@ -1,16 +1,19 @@
+@import '@carbon/colors/scss/colors';
+
 .App {
   &__header {
     .bx--header {
       &__name {
-        font-size: 1.125rem;
+        font-size: 1.25rem;
       }
       &__menu-item {
-        color: rgb(230, 230, 230)
+        font-size: 15px;
+        letter-spacing: 1px;
+        color: white;
       }
     }
-    .bx--side-nav__icon:not(.bx--side-nav__submenu-chevron) svg {
-      width: 1.25rem;
-      height: 1.25rem;
+    .bx--side-nav a.bx--header__menu-item {
+      height: 2.5rem;
     }
     .bx--switcher__item {
       height: 3rem;
@@ -18,8 +21,10 @@
         height: 3rem;
         display: flex;
         align-items: center;
+        color: $ibm-color__gray-20;
         svg {
           margin-right: 1rem;
+          color: $ibm-color__gray-20;
         }
       }
     }

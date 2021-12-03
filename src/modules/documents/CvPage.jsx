@@ -1,13 +1,7 @@
 import React from 'react';
 import { Documents } from '../../constants';
-import PageBase from '../../PageBase';
 import PdfView from './documentViewer/PdfView';
-import './ResumePage.scss';
 
-const ResumePage = () => (
-  <PageBase title="Curriculum vitae">
-    <PdfView document={Documents.CV} />
-  </PageBase>
-);
+const ResumePage = () => <PdfView document={Documents.CV} />;
 
 export default ResumePage;

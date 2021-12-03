@@ -1,8 +1,10 @@
 export const Paths = {
   HOME: '/',
+  EXPERIENCE: '/experience',
   SKILLS: '/skills',
   EMPLOYMENT: '/employment',
   PROJECTS: '/projects',
+  DOCUMENTS: '/documents',
   EDUCATION: '/education',
   RESUME: '/resume',
   CV: '/cv',

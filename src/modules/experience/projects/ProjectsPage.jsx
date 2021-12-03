@@ -1,9 +1,8 @@
 import React from 'react';
-import PageBase from '../../PageBase';
 import './ProjectsPage.scss';
 
 const ProjectsPage = () => (
-  <PageBase title="Projects" wip />
+  <div />
 );
 
 export default ProjectsPage;

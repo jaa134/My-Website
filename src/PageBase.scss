@@ -1,12 +1,11 @@
 @import '@carbon/colors/scss/colors';
 
 .PageBase {
-  padding: 0rem 2rem 2rem 19rem;
-  @media (max-width: 65.98rem) {
-    padding: 0 2rem 2rem 2rem;
-  }
   &__heading {
-    margin-bottom: 2rem;
+    padding: 1.5rem 5%;
+    margin-bottom: 3rem;
+    background-color: white;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.1);
   }
   &__subtitle {
     color: $ibm-color__gray-70;
@@ -14,5 +13,8 @@
   &__construction-notification.bx--inline-notification {
     margin-top: 0;
     max-width: unset;
+  }
+  &__content {
+    padding: 0 5%;
   }
 }

@@ -6,10 +6,6 @@ import {
   useLocation
 } from 'react-router-dom';
 import LocationPerson20 from '@carbon/icons-react/lib/location--person/20';
-import UserAvatar20 from '@carbon/icons-react/lib/user--avatar/20';
-import Cognitive20 from '@carbon/icons-react/lib/cognitive/20';
-import Document20 from '@carbon/icons-react/lib/document/20';
-import Chat20 from '@carbon/icons-react/lib/chat/20';
 import Phone20 from '@carbon/icons-react/lib/phone/20';
 import Email20 from '@carbon/icons-react/lib/email/20';
 import AppSwitcher20 from '@carbon/icons-react/lib/app-switcher/20';
@@ -25,6 +21,8 @@ import {
   HeaderMenuButton,
   HeaderName,
   HeaderGlobalBar,
+  HeaderNavigation,
+  HeaderMenuItem,
   HeaderGlobalAction,
   HeaderPanel,
   Switcher,
@@ -32,9 +30,7 @@ import {
   SkipToContent,
   SideNav,
   SideNavItems,
-  SideNavLink,
-  SideNavMenu,
-  SideNavMenuItem
+  HeaderSideNavItems
 } from 'carbon-components-react/lib/components/UIShell';
 import { Paths, Links } from './constants';
 import defineBlock from './utils/defineBlock';
@@ -43,12 +39,8 @@ import MapModal from './modules/modals/MapModal';
 import PhoneModal from './modules/modals/PhoneModal';
 import EmailModal from './modules/modals/EmailModal';
 import HomePage from './modules/home/HomePage';
-import SkillsPage from './modules/skills/SkillsPage';
-import EmploymentPage from './modules/employment/EmploymentPage';
-import ProjectsPage from './modules/projects/ProjectsPage';
-import EducationPage from './modules/education/EducationPage';
-import ResumePage from './modules/documents/ResumePage';
-import CvPage from './modules/documents/CvPage';
+import ExperiencePage from './modules/experience/ExperiencePage';
+import DocumentsPage from './modules/documents/DocumentsPage';
 import ContactsPage from './modules/contacts/ContactsPage';
 import './App.scss';
 
@@ -80,6 +72,12 @@ const App = () => (
               <HeaderName href="#" prefix="Jacob">
                 [Alspaw]
               </HeaderName>
+              <HeaderNavigation aria-label="Jacob [Alspaw]">
+                <HeaderMenuItem href={`#${Paths.HOME}`} isActive={isPathMatch(Paths.HOME, location.pathname)}>Profile</HeaderMenuItem>
+                <HeaderMenuItem href={`#${Paths.EXPERIENCE}`} isActive={isPathMatch(Paths.HOME, location.pathname)}>Experience</HeaderMenuItem>
+                <HeaderMenuItem href={`#${Paths.DOCUMENTS}`} isActive={isPathMatch(Paths.HOME, location.pathname)}>Documents</HeaderMenuItem>
+                <HeaderMenuItem href={`#${Paths.CONTACT}`} isActive={isPathMatch(Paths.HOME, location.pathname)}>Contact</HeaderMenuItem>
+              </HeaderNavigation>
               <HeaderGlobalBar>
                 <HeaderGlobalAction aria-label="Location" onClick={() => { setMapModalOpen(true); }}>
                   <LocationPerson20 />
@@ -99,46 +97,18 @@ const App = () => (
                   <AppSwitcher20 />
                 </HeaderGlobalAction>
               </HeaderGlobalBar>
-              <SideNav aria-label="Side navigation" expanded={isSideNavExpanded}>
+              <SideNav
+                aria-label="Side navigation"
+                expanded={isSideNavExpanded}
+                isPersistent={false}
+              >
                 <SideNavItems>
-                  <SideNavLink
-                    large
-                    renderIcon={UserAvatar20}
-                    href={`#${Paths.HOME}`}
-                    isActive={isPathMatch(Paths.HOME, location.pathname)}
-                  >
-                    Profile
-                  </SideNavLink>
-                  <SideNavMenu large renderIcon={Cognitive20} title="Experience">
-                    <SideNavMenuItem href={`#${Paths.SKILLS}`} isActive={isPathMatch(Paths.SKILLS, location.pathname)}>
-                      Technical skills
-                    </SideNavMenuItem>
-                    <SideNavMenuItem href={`#${Paths.EMPLOYMENT}`} isActive={isPathMatch(Paths.EMPLOYMENT, location.pathname)}>
-                      Employment
-                    </SideNavMenuItem>
-                    <SideNavMenuItem href={`#${Paths.PROJECTS}`} isActive={isPathMatch(Paths.PROJECTS, location.pathname)}>
-                      Projects
-                    </SideNavMenuItem>
-                    <SideNavMenuItem href={`#${Paths.EDUCATION}`} isActive={isPathMatch(Paths.EDUCATION, location.pathname)}>
-                      Education
-                    </SideNavMenuItem>
-                  </SideNavMenu>
-                  <SideNavMenu large renderIcon={Document20} title="Documents">
-                    <SideNavMenuItem href={`#${Paths.RESUME}`} isActive={isPathMatch(Paths.RESUME, location.pathname)}>
-                      Resume
-                    </SideNavMenuItem>
-                    <SideNavMenuItem href={`#${Paths.CV}`} isActive={isPathMatch(Paths.CV, location.pathname)}>
-                      Curriculum vitae
-                    </SideNavMenuItem>
-                  </SideNavMenu>
-                  <SideNavLink
-                    large
-                    renderIcon={Chat20}
-                    href={`#${Paths.CONTACT}`}
-                    isActive={isPathMatch(Paths.CONTACT, location.pathname)}
-                  >
-                    Contact
-                  </SideNavLink>
+                  <HeaderSideNavItems>
+                    <HeaderMenuItem href={`#${Paths.HOME}`} isActive={isPathMatch(Paths.HOME, location.pathname)}>Profile</HeaderMenuItem>
+                    <HeaderMenuItem href={`#${Paths.EXPERIENCE}`} isActive={isPathMatch(Paths.HOME, location.pathname)}>Experience</HeaderMenuItem>
+                    <HeaderMenuItem href={`#${Paths.DOCUMENTS}`} isActive={isPathMatch(Paths.HOME, location.pathname)}>Documents</HeaderMenuItem>
+                    <HeaderMenuItem href={`#${Paths.CONTACT}`} isActive={isPathMatch(Paths.HOME, location.pathname)}>Contact</HeaderMenuItem>
+                  </HeaderSideNavItems>
                 </SideNavItems>
               </SideNav>
               <HeaderPanel aria-label="Header panel" expanded={rightPanelExpanded}>
@@ -164,12 +134,8 @@ const App = () => (
             <Content id="main-content">
               <Routes>
                 <Route path={Paths.HOME} element={<HomePage />} exact />
-                <Route path={Paths.SKILLS} element={<SkillsPage />} />
-                <Route path={Paths.EMPLOYMENT} element={<EmploymentPage />} />
-                <Route path={Paths.PROJECTS} element={<ProjectsPage />} />
-                <Route path={Paths.EDUCATION} element={<EducationPage />} />
-                <Route path={Paths.RESUME} element={<ResumePage />} />
-                <Route path={Paths.CV} element={<CvPage />} />
+                <Route path={`${Paths.EXPERIENCE}/*`} element={<ExperiencePage />} />
+                <Route path={`${Paths.DOCUMENTS}/*`} element={<DocumentsPage />} />
                 <Route path={Paths.CONTACT} element={<ContactsPage />} />
                 <Route path="*" element={<Navigate replace to={Paths.HOME} />} />
               </Routes>
