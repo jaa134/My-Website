@@ -1,3 +1,5 @@
+@import '@carbon/colors/scss/colors';
+
 $image-width: 3.5rem;
 
 .ContactOption {
@@ -8,8 +10,14 @@ $image-width: 3.5rem;
   }
   &__image {
     width: $image-width;
+    svg {
+      fill: $ibm-color__gray-70;
+    }
   }
   &__content {
     margin-left: $image-width;
+  }
+  &__subtitle {
+    color: $ibm-color__gray-70;
   }
 }

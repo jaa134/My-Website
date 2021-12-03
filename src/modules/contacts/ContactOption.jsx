@@ -19,7 +19,7 @@ const ContactOption = ({
       <h3 className={bem('name')}>{title}</h3>
     </div>
     <div className={bem('content')}>
-      <h4>{subtitle}</h4>
+      <h4 className={bem('subtitle')}>{subtitle}</h4>
       {children}
     </div>
   </div>

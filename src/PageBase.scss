@@ -1,3 +1,5 @@
+@import '@carbon/colors/scss/colors';
+
 .PageBase {
   padding: 0rem 2rem 2rem 19rem;
   @media (max-width: 65.98rem) {
@@ -5,6 +7,9 @@
   }
   &__heading {
     margin-bottom: 2rem;
+  }
+  &__subtitle {
+    color: $ibm-color__gray-70;
   }
   &__construction-notification.bx--inline-notification {
     margin-top: 0;
