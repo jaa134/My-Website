@@ -1,9 +1,33 @@
+@import '@carbon/colors/scss/colors';
+
 .HomePage {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  background-color: white;
+  padding: 2.5rem;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   &__profile-image {
-    width: 20rem;
-    height: 20rem;
+    width: 400px;
+    height: 539px;
+    background-color: $ibm-color__gray-10;
+  }
+  &__info {
+    padding: 3rem;
+  }
+  &__name {
+    font-size: 6rem;
+    font-weight: 700;
+    letter-spacing: 0.25rem;
+  }
+  &__jobs {
+    padding: 1rem 0;
+  }
+  &__title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  &__statement {
+    font-size: 1.5rem;
+    line-height: 1.5;
   }
 }
