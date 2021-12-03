@@ -20,6 +20,14 @@ export function useWindowWidth() {
   return windowWidth;
 }
 
+export function useScrollPosition() {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const callback = () => setScrollPosition(window.pageYOffset);
+  const getScrollPosition = useCallback(callback, []);
+  useEventListener(window, 'scroll', getScrollPosition);
+  return scrollPosition;
+}
+
 export function useDocument(url) {
   const [result, setResult] = useState({
     loading: true,

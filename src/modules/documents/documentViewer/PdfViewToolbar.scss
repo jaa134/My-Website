@@ -15,23 +15,8 @@
     align-items: center;
     justify-content: space-between;
   }
-  &__pagination {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100%;
-  }
-  &__pagination-button {
-    color: white;
-    padding: 1rem;
-    cursor: pointer;
-    transition: 200ms;
-    &:hover {
-      background-color: $ibm-color__blue-60;
-    }
-  }
   &__pagination-count {
-    margin-left: 1.5rem;
+    padding-left: 1.5rem;
     color: white;
     font-size: 1rem;
   }
