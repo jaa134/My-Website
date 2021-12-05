@@ -17,7 +17,6 @@ const Tabs = ({
         <Link
           className={bem('tab', { active: isPathMatch(tab.href, location.pathname) })}
           to={tab.href}
-          onClick={() => { console.error('hi'); }}
         >
           {tab.text}
         </Link>
