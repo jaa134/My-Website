@@ -8,7 +8,7 @@ const bem = defineBlock('HomePage');
 const HomePage = () => (
   <PageBase
     title="Profile"
-    subtitle="Here's what you should know about me..."
+    subtitle="Here's what you should know about me"
   >
     <div className={bem()}>
       <img
@@ -23,6 +23,7 @@ const HomePage = () => (
           <div className={bem('title')}>FULL-STACK SOFTWARE DEVELOPER</div>
         </div>
         <div className={bem('statement')}>
+          I have not really considered what to put here yet, so...
           This is me. I am a software developer. I like to code and I do it fast.
           This is me. I am a software developer. I like to code and I do it fast.
           This is me. I am a software developer. I like to code and I do it fast.

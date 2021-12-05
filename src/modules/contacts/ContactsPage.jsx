@@ -46,7 +46,7 @@ const getSocialMediaTile = (url, handle, image) => (
 const ContactsPage = () => (
   <PageBase
     title="Contacts"
-    subtitle="Want to get in touch? Here's how you can reach me..."
+    subtitle="Want to get in touch? Here's how you can reach me"
   >
     <div className={bem()}>
       <ContactOption
