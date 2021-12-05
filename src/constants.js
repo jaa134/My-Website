@@ -20,7 +20,8 @@ export const Links = {
   GITHUB: 'https://github.com/jaa134',
   FACEBOOK: 'https://www.facebook.com/jacobalexander.alspaw',
   INSTAGRAM: 'https://www.instagram.com/jacobalspaw',
-  TWITTER: 'https://twitter.com/JacobAlspaw'
+  TWITTER: 'https://twitter.com/JacobAlspaw',
+  CWRU: 'https://case.edu/'
 };
 
 export const Handles = {

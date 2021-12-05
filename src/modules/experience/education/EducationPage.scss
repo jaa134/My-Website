@@ -1,3 +1,57 @@
+@import '@carbon/colors/scss/colors';
+
 .EducationPage {
-  text-align: center;
+  &__info {
+    padding: 0 0 1rem 0;
+  }
+  &__row {
+    line-height: 1.5rem;
+  }
+  &__uni-logo {
+    margin-bottom: 2rem;
+    cursor: pointer;
+    &:hover {
+      outline: 2px solid $ibm-color__blue-60;
+      outline-offset: 0.5rem;
+    }
+    img {
+      width: 50rem;
+    }
+  }
+  &__graduation {
+    font-size: 1.25rem;
+  }
+  &__degree {
+    font-size: 1.25rem;
+  }
+  &__gpa {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-left: 1rem;
+  }
+  &__intent {
+    font-size: 1.25rem;
+  }
+  .bx--data-table-header {
+    padding-left: 0;
+  }
+  &__grade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    font-weight: 700;
+    color: white;
+    &--A {
+      background-color: $ibm-color__green-40;
+    }
+    &--B {
+      background-color: $ibm-color__blue-50;
+    }
+    &--P {
+      background-color: $ibm-color__cool-gray-60;
+    }
+  }
 }

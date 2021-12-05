@@ -11,7 +11,6 @@ const ExperiencePage = () => (
   <PageBase
     title="Experience"
     subtitle="Take a closer look at what I've been up to"
-    wip
     tabs={[{
       text: 'Skills',
       href: `${Paths.EXPERIENCE}${Paths.SKILLS}`
