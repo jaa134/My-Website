@@ -34,4 +34,7 @@
     height: 2rem;
     margin-left: 1rem;
   }
+  &__side-link--active .bx--header__menu-item {
+    border-left: 2px solid $ibm-color__blue-60;
+  }
 }

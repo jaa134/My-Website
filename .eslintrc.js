@@ -23,6 +23,7 @@ module.exports = {
   rules: {
     'comma-dangle': ['error', 'never'],
     'no-console': ['error', { 'allow': ['error'] }],
+    'react/jsx-props-no-spreading': 'off',
     'react/jsx-one-expression-per-line': 'off',
     'react/function-component-definition': ['error', {
       namedComponents: 'arrow-function',

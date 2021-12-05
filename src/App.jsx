@@ -50,11 +50,15 @@ const App = () => (
   <div className={bem()}>
     <HeaderContainer
       render={({ isSideNavExpanded, onClickSideNavExpand }) => {
-        const location = useLocation();
+        const { pathname: currentPath } = useLocation();
         const [isMapModalOpen, setMapModalOpen] = useState(false);
         const [isPhoneModalOpen, setPhoneModalOpen] = useState(false);
         const [isEmailModalOpen, setEmailModalOpen] = useState(false);
         const [rightPanelExpanded, setRightPanelExpanded] = useState(false);
+        const getLinkProps = (baseClassName, path) => ({
+          className: bem(baseClassName, { active: isPathMatch(path, currentPath) }),
+          href: `#${path}`
+        });
         return (
           <>
             <Header className={bem('header')} aria-label="Jacob Alspaw">
@@ -73,10 +77,10 @@ const App = () => (
                 [Alspaw]
               </HeaderName>
               <HeaderNavigation aria-label="Jacob [Alspaw]">
-                <HeaderMenuItem href={`#${Paths.HOME}`} isActive={isPathMatch(Paths.HOME, location.pathname)}>Profile</HeaderMenuItem>
-                <HeaderMenuItem href={`#${Paths.EXPERIENCE}`} isActive={isPathMatch(Paths.HOME, location.pathname)}>Experience</HeaderMenuItem>
-                <HeaderMenuItem href={`#${Paths.DOCUMENTS}`} isActive={isPathMatch(Paths.HOME, location.pathname)}>Documents</HeaderMenuItem>
-                <HeaderMenuItem href={`#${Paths.CONTACT}`} isActive={isPathMatch(Paths.HOME, location.pathname)}>Contact</HeaderMenuItem>
+                <HeaderMenuItem {...getLinkProps('main-link', Paths.HOME)}>Profile</HeaderMenuItem>
+                <HeaderMenuItem {...getLinkProps('main-link', Paths.EXPERIENCE)}>Experience</HeaderMenuItem>
+                <HeaderMenuItem {...getLinkProps('main-link', Paths.DOCUMENTS)}>Documents</HeaderMenuItem>
+                <HeaderMenuItem {...getLinkProps('main-link', Paths.CONTACT)}>Contact</HeaderMenuItem>
               </HeaderNavigation>
               <HeaderGlobalBar>
                 <HeaderGlobalAction aria-label="Location" onClick={() => { setMapModalOpen(true); }}>
@@ -104,10 +108,10 @@ const App = () => (
               >
                 <SideNavItems>
                   <HeaderSideNavItems>
-                    <HeaderMenuItem href={`#${Paths.HOME}`} isActive={isPathMatch(Paths.HOME, location.pathname)}>Profile</HeaderMenuItem>
-                    <HeaderMenuItem href={`#${Paths.EXPERIENCE}`} isActive={isPathMatch(Paths.HOME, location.pathname)}>Experience</HeaderMenuItem>
-                    <HeaderMenuItem href={`#${Paths.DOCUMENTS}`} isActive={isPathMatch(Paths.HOME, location.pathname)}>Documents</HeaderMenuItem>
-                    <HeaderMenuItem href={`#${Paths.CONTACT}`} isActive={isPathMatch(Paths.HOME, location.pathname)}>Contact</HeaderMenuItem>
+                    <HeaderMenuItem {...getLinkProps('side-link', Paths.HOME)}>Profile</HeaderMenuItem>
+                    <HeaderMenuItem {...getLinkProps('side-link', Paths.EXPERIENCE)}>Experience</HeaderMenuItem>
+                    <HeaderMenuItem {...getLinkProps('side-link', Paths.DOCUMENTS)}>Documents</HeaderMenuItem>
+                    <HeaderMenuItem {...getLinkProps('side-link', Paths.CONTACT)}>Contact</HeaderMenuItem>
                   </HeaderSideNavItems>
                 </SideNavItems>
               </SideNav>

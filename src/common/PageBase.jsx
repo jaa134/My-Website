@@ -45,13 +45,14 @@ const PageBase = ({
 PageBase.defaultProps = {
   subtitle: null,
   children: null,
+  tabs: null,
   wip: false
 };
 
 PageBase.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string,
-  tabs: PropTypes.arrayOf(TabPropType).isRequired,
+  tabs: PropTypes.arrayOf(TabPropType),
   wip: PropTypes.bool,
   children: PropTypes.node
 };
