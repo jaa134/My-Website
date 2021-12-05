@@ -34,7 +34,7 @@ import {
 } from 'carbon-components-react/lib/components/UIShell';
 import { Paths, Links } from './constants';
 import defineBlock from './utils/defineBlock';
-import { isPathMatch } from './utils/pathUtils';
+import { isParentPath } from './utils/pathUtils';
 import MapModal from './modules/modals/MapModal';
 import PhoneModal from './modules/modals/PhoneModal';
 import EmailModal from './modules/modals/EmailModal';
@@ -56,7 +56,7 @@ const App = () => (
         const [isEmailModalOpen, setEmailModalOpen] = useState(false);
         const [rightPanelExpanded, setRightPanelExpanded] = useState(false);
         const getLinkProps = (baseClassName, path) => ({
-          className: bem(baseClassName, { active: isPathMatch(path, currentPath) }),
+          className: bem(baseClassName, { active: isParentPath(path, currentPath) }),
           href: `#${path}`
         });
         return (

@@ -15,6 +15,7 @@ const Tabs = ({
     <div className={bem()}>
       {tabs.map((tab) => (
         <Link
+          key={tab.href}
           className={bem('tab', { active: isPathMatch(tab.href, location.pathname) })}
           to={tab.href}
         >
