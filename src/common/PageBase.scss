@@ -1,5 +1,7 @@
 @import '@carbon/colors/scss/colors';
 
+$repositionWidth: 1100px;
+
 .PageBase {
   &__heading {
     display: flex;
@@ -9,9 +11,16 @@
     margin-bottom: 3rem;
     background-color: white;
     box-shadow: 0 0 4px 0 rgba(0,0,0,0.1);
+    @media screen and (max-width: $repositionWidth) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
   &__page-info {
     padding-bottom: 1.25rem;
+    @media screen and (max-width: $repositionWidth) {
+      padding-bottom: 0.5rem;
+    }
   }
   &__subtitle {
     color: $ibm-color__gray-70;
