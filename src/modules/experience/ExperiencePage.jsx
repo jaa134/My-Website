@@ -8,7 +8,7 @@ import ProjectsPage from './projects/ProjectsPage';
 import EducationPage from './education/EducationPage';
 
 const ExperiencePage = () => (
-  <PageBase title="Documents" wip>
+  <PageBase title="Experience" wip>
     <Routes>
       <Route path="/" element={<Navigate replace to={`${Paths.EXPERIENCE}${Paths.SKILLS}`} />} />
       <Route path={Paths.SKILLS} element={<SkillsPage />} />
