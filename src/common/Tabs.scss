@@ -1,0 +1,26 @@
+@import '@carbon/colors/scss/colors';
+
+.Tabs {
+  display: flex;
+  &__tab {
+    padding: 1rem 3rem 1rem 1rem;
+    margin-left: 2px;
+    font-size: 1rem;
+    color: $ibm-color__gray-70;
+    text-decoration: none;
+    border-bottom: 2px solid $ibm-color__gray-20;
+    &:hover {
+      color: $ibm-color__gray-100;
+      border-bottom-color: $ibm-color__gray-70;
+    }
+    &:focus {
+      outline: 2px solid $ibm-color__blue-60;
+      outline-offset: -2px;
+    }
+    &--active {
+      font-weight: 600;
+      color: $ibm-color__gray-100 !important;
+      border-bottom-color: $ibm-color__blue-60 !important;
+    }
+  }
+}

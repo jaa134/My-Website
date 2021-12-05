@@ -1,6 +1,6 @@
 import React from 'react';
 import defineBlock from '../../utils/defineBlock';
-import PageBase from '../../PageBase';
+import PageBase from '../../common/PageBase';
 import './HomePage.scss';
 
 const bem = defineBlock('HomePage');

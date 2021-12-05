@@ -16,7 +16,7 @@ import {
   Links,
   Handles
 } from '../../constants';
-import PageBase from '../../PageBase';
+import PageBase from '../../common/PageBase';
 import defineBlock from '../../utils/defineBlock';
 import ContactOption from './ContactOption';
 import './ContactsPage.scss';
