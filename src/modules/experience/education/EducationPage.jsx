@@ -155,6 +155,7 @@ const EducationPage = () => (
         rows,
         headers,
         getToolbarProps,
+        onInputChange,
         getExpandHeaderProps,
         getHeaderProps,
         getRowProps,
@@ -170,7 +171,7 @@ const EducationPage = () => (
             <TableToolbarContent>
               <TableToolbarSearch
                 persistent="true"
-                onChange={() => {}}
+                onChange={onInputChange}
               />
               <Button
                 onClick={() => { window.open('https://github.com/jaa134/Education-CWRU', '_blank'); }}
