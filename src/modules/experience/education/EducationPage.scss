@@ -3,13 +3,27 @@
 .EducationPage {
   padding-bottom: 3rem;
   &__uni-info {
-    padding: 0 0 1rem 0;
+    padding: 1rem 2rem;
+    margin: 0 0 1rem 0;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    &--UCT {
+      margin-bottom: 4rem;
+      img {
+        margin-bottom: -0.5rem;
+      }
+    }
   }
   &__uni-row {
     line-height: 1.5rem;
+    font-size: 1.125rem;
+    .bx--link {
+      font-size: 1.125rem;    
+      line-height: 1.5rem;
+    }
   }
   &__uni-logo {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     cursor: pointer;
     &:hover, &:focus {
       outline: 1px solid $ibm-color__blue-60;
@@ -19,18 +33,12 @@
       width: 35rem;
     }
   }
-  &__graduation,
-  &__degree,
-  &__gpa,
-  &__intent {
-    font-size: 1.125rem;
-  }
   &__gpa {
     font-weight: bold;
     margin-left: 1rem;
   }
   .bx--data-table-header {
-    padding: 1rem 0 0.5rem 0;
+    padding: 0 0 0.5rem 0;
   }
   &__grade {
     display: flex;

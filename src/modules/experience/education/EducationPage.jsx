@@ -28,7 +28,7 @@ const bem = defineBlock('EducationPage');
 
 const EducationPage = () => (
   <div className={bem()}>
-    <div className={bem('uni-info')}>
+    <div className={bem('uni-info', 'CWRU')}>
       <Link
         className={bem('uni-logo')}
         href={Links.CWRU}
@@ -45,6 +45,30 @@ const EducationPage = () => (
         B.S. in computer science<span className={bem('gpa')}>(3.634 / 4.0)</span>
       </div>
       <div className={bem(['uni-row', 'intent'])}>Intent for software engineering in industry</div>
+    </div>
+    <div className={bem('uni-info', 'UCT')}>
+      <Link
+        className={bem('uni-logo')}
+        href={Links.UCT}
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img
+          src="images/UCT_logo.gif"
+          alt="profile"
+        />
+      </Link>
+      <div className={bem(['uni-row', 'reason'])}>
+        <Link
+          href={Links.IES}
+          target="_blank"
+          rel="noreferrer"
+        >
+          IES Study Abroad
+        </Link> program in South Africa
+      </div>
+      <div className={bem(['uni-row', 'attendance'])}>Attended in spring 2017</div>
+      <div className={bem(['uni-row', 'intent'])}>Studied humanities and environmental sciences</div>
     </div>
     <DataTable headers={headerData} rows={rowData} isSortable>
       {({
@@ -66,7 +90,7 @@ const EducationPage = () => (
           <TableToolbar {...getToolbarProps()}>
             <TableToolbarContent>
               <TableToolbarSearch
-                persistent="true"
+                persistent
                 onChange={onInputChange}
               />
               <Button
@@ -146,6 +170,7 @@ const EducationPage = () => (
                             <div>
                               {links.map(({ displayText, href }) => (
                                 <Link
+                                  key={displayText}
                                   href={href}
                                   target="_blank"
                                   rel="noreferrer"

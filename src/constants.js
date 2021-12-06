@@ -21,7 +21,9 @@ export const Links = {
   FACEBOOK: 'https://www.facebook.com/jacobalexander.alspaw',
   INSTAGRAM: 'https://www.instagram.com/jacobalspaw',
   TWITTER: 'https://twitter.com/JacobAlspaw',
-  CWRU: 'https://case.edu/'
+  CWRU: 'https://case.edu/',
+  UCT: 'https://www.uct.ac.za/',
+  IES: 'https://www.iesabroad.org/programs/cape-town-university-cape-town'
 };
 
 export const Handles = {
