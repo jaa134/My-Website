@@ -407,7 +407,7 @@ export const rowDataExtended = {
     instructor: 'N/A',
     description: 'Quantitative introduction to the composition, structure, dynamics, and evolution of Earth using principles of geophysics and geochemistry. Planetary formation and differentiation, composition and structure of Earth and planets, heat generation and heat flow, mantle convection and plate tectonics, planetary magnetism and core dynamics, chemical evolution of Earth and planets, extrasolar planets and super Earths.',
     links: [],
-    comment: 'I took this class in South Africa during a study abroad program through IES. This was actually a course mostly dedicated to Oceanography which was fitting because the University is located near two oceans. Unrelated to this class, I went shark cage diving and got to see the mixing of the Atlantic and Indian oceans.'
+    comment: 'I took this class in South Africa during a study abroad program through IES. This was actually a course mostly dedicated to Oceanography which was fitting because the University is located near two oceans. Unrelated to this class, I went shark cage diving and got to see the mixing of the Atlantic and Indian oceans!'
   },
   [courses.MUEN_335]: {
     department: 'Music & Ensembles',

@@ -3,7 +3,9 @@
 $image-width: 3.5rem;
 
 .ContactOption {
-  padding: 0 0 3rem 0;
+  &:not(:last-child) {
+    padding: 0 0 3rem 0;
+  }
   &__title {
     display: flex;
     align-items: center;
