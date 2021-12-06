@@ -1,39 +1,36 @@
 @import '@carbon/colors/scss/colors';
 
 .EducationPage {
-  &__info {
+  padding-bottom: 3rem;
+  &__uni-info {
     padding: 0 0 1rem 0;
   }
-  &__row {
+  &__uni-row {
     line-height: 1.5rem;
   }
   &__uni-logo {
     margin-bottom: 2rem;
     cursor: pointer;
-    &:hover {
-      outline: 2px solid $ibm-color__blue-60;
+    &:hover, &:focus {
+      outline: 1px solid $ibm-color__blue-60;
       outline-offset: 0.5rem;
     }
     img {
-      width: 50rem;
+      width: 35rem;
     }
   }
-  &__graduation {
-    font-size: 1.25rem;
-  }
-  &__degree {
-    font-size: 1.25rem;
+  &__graduation,
+  &__degree,
+  &__gpa,
+  &__intent {
+    font-size: 1.125rem;
   }
   &__gpa {
-    font-size: 1.25rem;
     font-weight: bold;
     margin-left: 1rem;
   }
-  &__intent {
-    font-size: 1.25rem;
-  }
   .bx--data-table-header {
-    padding-left: 0;
+    padding: 1rem 0 0.5rem 0;
   }
   &__grade {
     display: flex;
@@ -53,5 +50,17 @@
     &--P {
       background-color: $ibm-color__cool-gray-60;
     }
+  }
+  &__extended-course-info {
+    padding: 0.75rem 0;
+  }
+  &__row {
+    &:not(:last-child) {
+      padding-bottom: 0.5rem;
+    }
+  }
+  &__quick-detail {
+    display: inline-block;
+    width: 14rem;
   }
 }
