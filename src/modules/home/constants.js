@@ -1,3 +1,22 @@
+export const interests = [
+  'Web development',
+  'Programming',
+  'Puzzles',
+  'Family & friends',
+  'Swimming',
+  'Running',
+  'Rock climbing',
+  'Hiking & backpacking',
+  'Camping',
+  'Skiing',
+  'Fishing',
+  'Traveling',
+  'Movies & film',
+  'Photography',
+  'Card games',
+  'Video games'
+];
+
 export const albumPath = 'images/album';
 
 export const photos = [{
