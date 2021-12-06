@@ -1,20 +1,12 @@
 @import '@carbon/colors/scss/colors';
 
 .HomePage {
-  &__about {
-    display: flex;
-    justify-content: flex-start;
-    background-color: white;
-    padding: 1rem;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-  }
-  &__profile-image {
-    width: 400px;
-    height: 539px;
-    background-color: $ibm-color__gray-10;
-  }
   &__info {
     padding: 3rem;
+    background-color: white;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
   }
   &__name {
     font-size: 6rem;
@@ -31,5 +23,13 @@
   &__statement {
     font-size: 1.5rem;
     line-height: 1.5;
+  }
+  .react-photo-gallery--gallery {
+    img {
+      background-color: $ibm-color__gray-20;
+      &:hover {
+        outline: 2px solid $ibm-color__blue-60;
+      }
+    }
   }
 }
