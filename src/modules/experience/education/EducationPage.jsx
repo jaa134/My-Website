@@ -17,6 +17,7 @@ import {
   TableExpandedRow,
   TableCell
 } from 'carbon-components-react';
+import Launch20 from '@carbon/icons-react/lib/launch/20';
 import StarFilled20 from '@carbon/icons-react/lib/star--filled/20';
 import { Links } from '../../../constants';
 import defineBlock from '../../../utils/defineBlock';
@@ -175,6 +176,7 @@ const EducationPage = () => (
                 onClick={() => { window.open('https://github.com/jaa134/Education-CWRU', '_blank'); }}
                 size="small"
                 kind="primary"
+                renderIcon={Launch20}
               >
                 View course work
               </Button>
