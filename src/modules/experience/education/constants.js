@@ -139,7 +139,7 @@ export const rowData = [{
   term: '2017 - Spring',
   name: 'Intro to Oceanography',
   letterGrade: 'P',
-  isFavorite: false
+  isFavorite: true
 }, {
   id: courses.MUEN_335,
   code: courses.MUEN_335,
@@ -330,14 +330,14 @@ export const rowDataExtended = {
     instructor: 'Harold Connamacher',
     description: 'This course examines the four main programming paradigms: imperative, object-oriented, functional, and logical. It is assumed that students will come to the course with significant exposure to object-oriented programming and some exposure to imperative programming. The course will teach the functional paradigm in depth, enhance the students\' knowledge of the object-oriented and imperative paradigms, and introduce the logical paradigm. The course will explore language syntax, semantics, names/scopes, types, expressions, assignment, subprograms, abstraction and inheritance. This exploration will have several forms. Students will study the programming language concepts at a theoretical level, use the concepts in functional language programming, and implement the concepts by designing language interpreters.',
     links: [],
-    comment: ''
+    comment: 'I spent many late nights in the library designing and developing the program interpreter for this course. It was one of the most complex assignments I completed while at University.'
   },
   [courses.EECS_392]: {
     department: 'Electrical Engr & Comp Sci',
     instructor: 'Jing Li',
     description: 'This course is an introduction to app development for iPhone and iPad using Cocoa Touch Framework and Xcode development environment. Topics include Swift programming language and iOS SDK/foundations, object-oriented design and model-view-controller framework, user interface design using Xcode. Additional topics may include data management, map applications, animations and some recent developments in iOS.',
     links: [],
-    comment: ''
+    comment: 'This is the course that inspired me to write a mobile application for CWRUded, a personal project that you can find under the projects tab.'
   },
   [courses.EECS_448]: {
     department: 'Electrical Engr & Comp Sci',
@@ -365,21 +365,21 @@ export const rowDataExtended = {
     instructor: 'Mark Allman',
     description: 'An introduction to computer networks and the Internet. Applications: http, ftp, e-mail, DNS, socket programming. Transport: UDP, TCP, reliable data transfer, and congestion control. Network layer: IP, routing, and NAT. Link layer: taxonomy, Ethernet, 802.11.',
     links: [],
-    comment: ''
+    comment: 'The prototype for CWRUded, my favorite personal project, was developed for this course\'s main assignmnet. The goal for the assignmnet was to be able to record some sort of data about a given network. I decided on recording metrics for how many devices are active on a network and then extrapolated that number to determine how busy the physical location around a wireless network is.'
   },
   [courses.EECS_393]: {
     department: 'Electrical Engr & Comp Sci',
     instructor: 'Andy Podgurski',
     description: 'Introduction to software engineering; software lifecycle models; development team organization and project management; requirements analysis and specification techniques; software design techniques; programming practices; software validation techniques; software maintenance practices; software engineering ethics. Undergraduates work in teams to complete a significant software development project.',
     links: [],
-    comment: ''
+    comment: 'This is the course where I developed the PiClock, a smart alarm clock that requires users to complete a simple task before a morning alarm can be disabled. The PiClock was attempting to motivate users to get out of bed on time.'
   },
   [courses.EECS_395]: {
     department: 'Electrical Engr & Comp Sci',
     instructor: 'Soumya Ray',
     description: 'Capstone course for computer science seniors. Material from previous and concurrent courses used to solve computer programming problems and to develop software systems. Professional engineering topics such as project management, engineering design, communications, and professional ethics. Requirements include periodic reporting of progress, plus a final oral presentation and written report. Scheduled formal project presentations during last week of classes.',
     links: [],
-    comment: ''
+    comment: 'The Synchrony synchronzied streaming platform was my senior project. With the help of a few others, I had developed a synchronized streaming service that enhances the music listening experience of users through shared playlist collaboration and discovery. Our team ended up recieving academic honors and winning best senior project for the EECS departmnet that year! I was the lead UI/UX developer responsible for a flexible design and implementation using Angular and Sass. Spotify later adopted this idea and introduced their own solution for synchronized streaming with friends.' 
   },
   [courses.PHIL_201]: {
     department: 'Philosophy',
@@ -407,21 +407,21 @@ export const rowDataExtended = {
     instructor: 'N/A',
     description: 'Quantitative introduction to the composition, structure, dynamics, and evolution of Earth using principles of geophysics and geochemistry. Planetary formation and differentiation, composition and structure of Earth and planets, heat generation and heat flow, mantle convection and plate tectonics, planetary magnetism and core dynamics, chemical evolution of Earth and planets, extrasolar planets and super Earths.',
     links: [],
-    comment: ''
+    comment: 'I took this class in South Africa during a study abroad program through IES. This was actually a course mostly dedicated to Oceanography which was fitting because the University is located near two oceans. Unrelated to this class, I went shark cage diving and got to see the mixing of the Atlantic and Indian oceans.'
   },
   [courses.MUEN_335]: {
     department: 'Music & Ensembles',
     instructor: 'N/A',
     description: 'General musical ensemble course where perofrmances, written reports, and a study of musical origins are rquired',
     links: [],
-    comment: ''
+    comment: 'I took this class in South Africa during a study abroad program through IES. I learned to play basic songs on a few traditional African instruments, my favorite being the Kalimba.'
   },
   [courses.EECS_293]: {
     department: 'Electrical Engr & Comp Sci',
     instructor: 'Vincenzo Liberatore',
     description: 'A course to improve programming skills, software quality, and the software development process. Software design; Version control; Control issues and routines; Pseudo-code programming process and developer testing; Defensive programming; Classes; Debugging; Self-documenting code; Refactoring.',
     links: [],
-    comment: ''
+    comment: 'A brutal, but necessary class. Professor Liberatore strives to make his students better programmers through his challenging assignments and in-depth lectures. Were it not for this class, I would not be as good of a developer as I am today.'
   },
   [courses.EECS_341]: {
     department: 'Electrical Engr & Comp Sci',
@@ -491,7 +491,7 @@ export const rowDataExtended = {
     instructor: 'Chris Fietkiewicz',
     description: 'Students will learn the fundamentals of computer programming and algorithmic problem solving. Concepts are illustrated using a wide range of examples from engineering, science, and other disciplines. Students learn how to create, debug, and test computer programs, and how to develop algorithmic solution to problems and write programs that implement those solutions. Matlab is the primary programming language used in this course, but other languages may be introduced or used throughout.',
     links: [],
-    comment: ''
+    comment: 'I took this class just to learn MATLAB. I ended up writing an email client in MATLAB which could spoof the sender\'s address. I guess Professor Fietkiewicz liked my final project enough to invite me back as a teaching assistant the following semester!'
   },
   [courses.ENGR_145]: {
     department: 'Engineering Science',
