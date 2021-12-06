@@ -77,3 +77,9 @@ $repositionWidth: 1175px;
     }
   }
 }
+.react-images__blanket {
+  z-index: 9998 !important;
+}
+.react-images__positioner {
+  z-index: 9999 !important;
+}
