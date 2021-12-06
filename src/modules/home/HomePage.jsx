@@ -53,11 +53,10 @@ const HomePage = () => {
               I&apos;m an enthusiastic and creative technologist
               with hands-on skills in a wide range of software, tools, and programming languages.
               During my 5 years of industry experience as a full-stack developer and front-end
-              lead, I have designed, developed, and launched customized, highly responsive
-              websites and mobile applications across a variety of market sectors. In addition,
-              I have consistently met client expectations and project milestones while working in
-              deadline-driven environments where communication and teamwork is required for
-              success.
+              lead, I have designed, developed, and launched highly responsive websites and mobile
+              applications across a variety of market sectors. In addition, I have consistently met
+              client expectations and project milestones while working in deadline-driven
+              environments where communication and teamwork is required for success.
             </div>
             <div className={bem('paragraph')}>
               If you would like to further discuss my skills and demonstrate how I can be of
