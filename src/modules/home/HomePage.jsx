@@ -28,15 +28,18 @@ const HomePage = () => {
         <div className={bem('info')}>
           <div className={bem('name')}>Jacob Alspaw</div>
           <div className={bem('jobs')}>
-            <div className={bem('title')}>UI/UX LEAD DEVELOPER</div>
-            <div className={bem('title')}>FULL-STACK SOFTWARE DEVELOPER</div>
+            <div className={bem('title')}>UI/UX Lead Developer,</div>
+            <div className={bem('title')}>Full-Stack Software Developer</div>
           </div>
           <div className={bem('statement')}>
-            I have not really considered what to put here yet, so...
-            This is me. I am a software developer. I like to code and I do it fast.
-            This is me. I am a software developer. I like to code and I do it fast.
-            This is me. I am a software developer. I like to code and I do it fast.
-            This is me. I am a software developer. I like to code and I do it fast.
+            I&apos;m an enthusiastic and creative technologist with hands-on skills in a
+            wide range of software, tools, and programming languages. During my 5 years
+            of industry experience as a full-stack developer and front-end lead, I have
+            designed, developed, and launched customized, highly responsive websites and
+            mobile applications across a variety of market sectors. In addition, I have
+            consistently met client expectations and project milestones while working in
+            deadline-driven environments where communication and teamwork is required for
+            success.
           </div>
         </div>
         <Gallery photos={photos} onClick={openLightbox} />;
