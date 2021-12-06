@@ -150,7 +150,7 @@ const EducationPage = () => (
       </div>
       <div className={bem(['uni-row', 'intent'])}>Intent for software engineering in industry</div>
     </div>
-    <DataTable headers={headerData} rows={rowData}>
+    <DataTable headers={headerData} rows={rowData} isSortable>
       {({
         rows,
         headers,
