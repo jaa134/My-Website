@@ -19,7 +19,7 @@ import {
 } from 'carbon-components-react';
 import Launch20 from '@carbon/icons-react/lib/launch/20';
 import StarFilled20 from '@carbon/icons-react/lib/star--filled/20';
-import { Links } from '../../../constants';
+import { links } from '../../../constants';
 import defineBlock from '../../../utils/defineBlock';
 import { headerData, rowData, rowDataExtended } from './constants';
 import './EducationPage.scss';
@@ -31,7 +31,7 @@ const EducationPage = () => (
     <div className={bem('uni-info', 'CWRU')}>
       <Link
         className={bem('uni-logo')}
-        href={Links.CWRU}
+        href={links.CWRU}
         target="_blank"
         rel="noreferrer"
       >
@@ -49,7 +49,7 @@ const EducationPage = () => (
     <div className={bem('uni-info', 'UCT')}>
       <Link
         className={bem('uni-logo')}
-        href={Links.UCT}
+        href={links.UCT}
         target="_blank"
         rel="noreferrer"
       >
@@ -60,7 +60,7 @@ const EducationPage = () => (
       </Link>
       <div className={bem(['uni-row', 'reason'])}>
         <Link
-          href={Links.IES}
+          href={links.IES}
           target="_blank"
           rel="noreferrer"
         >
@@ -118,7 +118,7 @@ const EducationPage = () => (
               {rows.map((row) => {
                 const { id, cells } = row;
                 const {
-                  department, instructor, description, links, comment
+                  department, instructor, description, links: rowLinks, comment
                 } = rowDataExtended[id];
                 return (
                   <Fragment key={id}>
@@ -164,11 +164,11 @@ const EducationPage = () => (
                           <h6>Description</h6>
                           <div>{description}</div>
                         </div>
-                        {links.length > 0 && (
+                        {rowLinks.length > 0 && (
                           <div className={bem('row')}>
                             <h6>Links</h6>
                             <div>
-                              {links.map(({ displayText, href }) => (
+                              {rowLinks.map(({ displayText, href }) => (
                                 <Link
                                   key={displayText}
                                   href={href}

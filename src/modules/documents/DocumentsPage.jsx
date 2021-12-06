@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { Paths } from '../../constants';
+import { paths } from '../../constants';
 import PageBase from '../../common/PageBase';
 import ResumePage from './ResumePage';
 import CvPage from './CvPage';
@@ -11,17 +11,17 @@ const DocumentsPage = () => (
     subtitle="Review a summary of my greatest achievements"
     tabs={[{
       text: 'Resume',
-      href: `${Paths.DOCUMENTS}${Paths.RESUME}`
+      href: `${paths.DOCUMENTS}${paths.RESUME}`
     }, {
       text: 'CV',
-      href: `${Paths.DOCUMENTS}${Paths.CV}`
+      href: `${paths.DOCUMENTS}${paths.CV}`
     }]}
   >
     <Routes>
-      <Route path="/" element={<Navigate replace to={`${Paths.DOCUMENTS}${Paths.RESUME}`} />} />
-      <Route path={Paths.RESUME} element={<ResumePage />} />
-      <Route path={Paths.CV} element={<CvPage />} />
-      <Route path="*" element={<Navigate replace to={Paths.HOME} />} />
+      <Route path="/" element={<Navigate replace to={`${paths.DOCUMENTS}${paths.RESUME}`} />} />
+      <Route path={paths.RESUME} element={<ResumePage />} />
+      <Route path={paths.CV} element={<CvPage />} />
+      <Route path="*" element={<Navigate replace to={paths.HOME} />} />
     </Routes>
   </PageBase>
 );

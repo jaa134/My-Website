@@ -32,7 +32,7 @@ import {
   SideNavItems,
   HeaderSideNavItems
 } from 'carbon-components-react/lib/components/UIShell';
-import { Paths, Links } from './constants';
+import { paths, links } from './constants';
 import defineBlock from './utils/defineBlock';
 import { isParentPath } from './utils/pathUtils';
 import MapModal from './modules/modals/MapModal';
@@ -77,10 +77,10 @@ const App = () => (
                 [Alspaw]
               </HeaderName>
               <HeaderNavigation aria-label="Jacob [Alspaw]">
-                <HeaderMenuItem {...getLinkProps('main-link', Paths.HOME)}>Profile</HeaderMenuItem>
-                <HeaderMenuItem {...getLinkProps('main-link', Paths.EXPERIENCE)}>Experience</HeaderMenuItem>
-                <HeaderMenuItem {...getLinkProps('main-link', Paths.DOCUMENTS)}>Documents</HeaderMenuItem>
-                <HeaderMenuItem {...getLinkProps('main-link', Paths.CONTACT)}>Contact</HeaderMenuItem>
+                <HeaderMenuItem {...getLinkProps('main-link', paths.HOME)}>Profile</HeaderMenuItem>
+                <HeaderMenuItem {...getLinkProps('main-link', paths.EXPERIENCE)}>Experience</HeaderMenuItem>
+                <HeaderMenuItem {...getLinkProps('main-link', paths.DOCUMENTS)}>Documents</HeaderMenuItem>
+                <HeaderMenuItem {...getLinkProps('main-link', paths.CONTACT)}>Contact</HeaderMenuItem>
               </HeaderNavigation>
               <HeaderGlobalBar>
                 <HeaderGlobalAction aria-label="Location" onClick={() => { setMapModalOpen(true); }}>
@@ -108,28 +108,28 @@ const App = () => (
               >
                 <SideNavItems>
                   <HeaderSideNavItems>
-                    <HeaderMenuItem {...getLinkProps('side-link', Paths.HOME)}>Profile</HeaderMenuItem>
-                    <HeaderMenuItem {...getLinkProps('side-link', Paths.EXPERIENCE)}>Experience</HeaderMenuItem>
-                    <HeaderMenuItem {...getLinkProps('side-link', Paths.DOCUMENTS)}>Documents</HeaderMenuItem>
-                    <HeaderMenuItem {...getLinkProps('side-link', Paths.CONTACT)}>Contact</HeaderMenuItem>
+                    <HeaderMenuItem {...getLinkProps('side-link', paths.HOME)}>Profile</HeaderMenuItem>
+                    <HeaderMenuItem {...getLinkProps('side-link', paths.EXPERIENCE)}>Experience</HeaderMenuItem>
+                    <HeaderMenuItem {...getLinkProps('side-link', paths.DOCUMENTS)}>Documents</HeaderMenuItem>
+                    <HeaderMenuItem {...getLinkProps('side-link', paths.CONTACT)}>Contact</HeaderMenuItem>
                   </HeaderSideNavItems>
                 </SideNavItems>
               </SideNav>
               <HeaderPanel aria-label="Header panel" expanded={rightPanelExpanded}>
                 <Switcher aria-label="Switcher container">
-                  <SwitcherItem aria-label="Linkedin" target="_blank" href={Links.LINKEDIN}>
+                  <SwitcherItem aria-label="Linkedin" target="_blank" href={links.LINKEDIN}>
                     <LogoLinkedin24 /> Linkedin
                   </SwitcherItem>
-                  <SwitcherItem aria-label="Github" target="_blank" href={Links.GITHUB}>
+                  <SwitcherItem aria-label="Github" target="_blank" href={links.GITHUB}>
                     <LogoGithub24 /> Github
                   </SwitcherItem>
-                  <SwitcherItem aria-label="Facebook" target="_blank" href={Links.FACEBOOK}>
+                  <SwitcherItem aria-label="Facebook" target="_blank" href={links.FACEBOOK}>
                     <LogoFacebook24 /> Facebook
                   </SwitcherItem>
-                  <SwitcherItem aria-label="Instagram" target="_blank" href={Links.INSTAGRAM}>
+                  <SwitcherItem aria-label="Instagram" target="_blank" href={links.INSTAGRAM}>
                     <LogoInstagram24 /> Instagram
                   </SwitcherItem>
-                  <SwitcherItem aria-label="Twitter" target="_blank" href={Links.TWITTER}>
+                  <SwitcherItem aria-label="Twitter" target="_blank" href={links.TWITTER}>
                     <LogoTwitter24 /> Twitter
                   </SwitcherItem>
                 </Switcher>
@@ -137,11 +137,11 @@ const App = () => (
             </Header>
             <Content id="main-content">
               <Routes>
-                <Route path={Paths.HOME} element={<HomePage />} exact />
-                <Route path={`${Paths.EXPERIENCE}/*`} element={<ExperiencePage />} />
-                <Route path={`${Paths.DOCUMENTS}/*`} element={<DocumentsPage />} />
-                <Route path={Paths.CONTACT} element={<ContactsPage />} />
-                <Route path="*" element={<Navigate replace to={Paths.HOME} />} />
+                <Route path={paths.HOME} element={<HomePage />} exact />
+                <Route path={`${paths.EXPERIENCE}/*`} element={<ExperiencePage />} />
+                <Route path={`${paths.DOCUMENTS}/*`} element={<DocumentsPage />} />
+                <Route path={paths.CONTACT} element={<ContactsPage />} />
+                <Route path="*" element={<Navigate replace to={paths.HOME} />} />
               </Routes>
               <MapModal open={isMapModalOpen} close={() => { setMapModalOpen(false); }} />
               <PhoneModal open={isPhoneModalOpen} close={() => { setPhoneModalOpen(false); }} />

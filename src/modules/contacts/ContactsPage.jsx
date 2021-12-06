@@ -13,8 +13,8 @@ import {
   EMAIL_ADDRESS,
   PHONE_NUMBER,
   LOCATION,
-  Links,
-  Handles
+  links,
+  handles
 } from '../../constants';
 import PageBase from '../../common/PageBase';
 import defineBlock from '../../utils/defineBlock';
@@ -76,11 +76,11 @@ const ContactsPage = () => (
         image={<AppSwitcher32 />}
       >
         <div className={bem('socials')}>
-          {getSocialMediaTile(Links.LINKEDIN, Handles.LINKEDIN, <LogoLinkedin32 />)}
-          {getSocialMediaTile(Links.GITHUB, Handles.GITHUB, <LogoGithub32 />)}
-          {getSocialMediaTile(Links.FACEBOOK, Handles.FACEBOOK, <LogoFacebook32 />)}
-          {getSocialMediaTile(Links.INSTAGRAM, Handles.INSTAGRAM, <LogoInstagram32 />)}
-          {getSocialMediaTile(Links.TWITTER, Handles.TWITTER, <LogoTwitter32 />)}
+          {getSocialMediaTile(links.LINKEDIN, handles.LINKEDIN, <LogoLinkedin32 />)}
+          {getSocialMediaTile(links.GITHUB, handles.GITHUB, <LogoGithub32 />)}
+          {getSocialMediaTile(links.FACEBOOK, handles.FACEBOOK, <LogoFacebook32 />)}
+          {getSocialMediaTile(links.INSTAGRAM, handles.INSTAGRAM, <LogoInstagram32 />)}
+          {getSocialMediaTile(links.TWITTER, handles.TWITTER, <LogoTwitter32 />)}
         </div>
       </ContactOption>
     </div>

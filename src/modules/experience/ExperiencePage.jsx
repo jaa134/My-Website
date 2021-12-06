@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { Paths } from '../../constants';
+import { paths } from '../../constants';
 import PageBase from '../../common/PageBase';
 import SkillsPage from './skills/SkillsPage';
 import EmploymentPage from './employment/EmploymentPage';
@@ -13,25 +13,25 @@ const ExperiencePage = () => (
     subtitle="Take a closer look at what I've been up to"
     tabs={[{
       text: 'Skills',
-      href: `${Paths.EXPERIENCE}${Paths.SKILLS}`
+      href: `${paths.EXPERIENCE}${paths.SKILLS}`
     }, {
       text: 'Employment',
-      href: `${Paths.EXPERIENCE}${Paths.EMPLOYMENT}`
+      href: `${paths.EXPERIENCE}${paths.EMPLOYMENT}`
     }, {
       text: 'Projects',
-      href: `${Paths.EXPERIENCE}${Paths.PROJECTS}`
+      href: `${paths.EXPERIENCE}${paths.PROJECTS}`
     }, {
       text: 'Education',
-      href: `${Paths.EXPERIENCE}${Paths.EDUCATION}`
+      href: `${paths.EXPERIENCE}${paths.EDUCATION}`
     }]}
   >
     <Routes>
-      <Route path="/" element={<Navigate replace to={`${Paths.EXPERIENCE}${Paths.SKILLS}`} />} />
-      <Route path={Paths.SKILLS} element={<SkillsPage />} />
-      <Route path={Paths.EMPLOYMENT} element={<EmploymentPage />} />
-      <Route path={Paths.PROJECTS} element={<ProjectsPage />} />
-      <Route path={Paths.EDUCATION} element={<EducationPage />} />
-      <Route path="*" element={<Navigate replace to={Paths.HOME} />} />
+      <Route path="/" element={<Navigate replace to={`${paths.EXPERIENCE}${paths.SKILLS}`} />} />
+      <Route path={paths.SKILLS} element={<SkillsPage />} />
+      <Route path={paths.EMPLOYMENT} element={<EmploymentPage />} />
+      <Route path={paths.PROJECTS} element={<ProjectsPage />} />
+      <Route path={paths.EDUCATION} element={<EducationPage />} />
+      <Route path="*" element={<Navigate replace to={paths.HOME} />} />
     </Routes>
   </PageBase>
 );

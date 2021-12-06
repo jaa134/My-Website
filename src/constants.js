@@ -1,4 +1,4 @@
-export const Paths = {
+export const paths = {
   HOME: '/profile',
   EXPERIENCE: '/experience',
   SKILLS: '/skills',
@@ -15,7 +15,7 @@ export const PHONE_NUMBER = '+1 636 699-7344';
 export const EMAIL_ADDRESS = 'dev@jacob-alspaw.com';
 export const LOCATION = 'Littleton, Colorado 80128';
 
-export const Links = {
+export const links = {
   LINKEDIN: 'https://www.linkedin.com/in/jacob-alspaw',
   GITHUB: 'https://github.com/jaa134',
   FACEBOOK: 'https://www.facebook.com/jacobalexander.alspaw',
@@ -26,7 +26,7 @@ export const Links = {
   IES: 'https://www.iesabroad.org/programs/cape-town-university-cape-town'
 };
 
-export const Handles = {
+export const handles = {
   LINKEDIN: '@Jacob Alspaw',
   GITHUB: '@jaa134',
   FACEBOOK: '@jacobalexander.alspaw',
@@ -34,7 +34,7 @@ export const Handles = {
   TWITTER: '@JacobAlspaw'
 };
 
-export const Documents = {
+export const documents = {
   RESUME: {
     name: 'Alspaw-Jacob Resume.pdf',
     numPages: 1

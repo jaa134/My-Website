@@ -1,7 +1,7 @@
 import React from 'react';
-import { Documents } from '../../constants';
+import { documents } from '../../constants';
 import PdfView from './documentViewer/PdfView';
 
-const ResumePage = () => <PdfView document={Documents.CV} />;
+const ResumePage = () => <PdfView document={documents.CV} />;
 
 export default ResumePage;

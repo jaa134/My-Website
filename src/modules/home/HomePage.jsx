@@ -6,7 +6,7 @@ import defineBlock from '../../utils/defineBlock';
 import PageBase from '../../common/PageBase';
 import { interests, photos } from './constants';
 import './HomePage.scss';
-import { Paths } from '../../constants';
+import { paths } from '../../constants';
 
 const bem = defineBlock('HomePage');
 
@@ -60,7 +60,7 @@ const HomePage = () => {
             </div>
             <div className={bem('paragraph')}>
               If you would like to further discuss my skills and demonstrate how I can be of
-              service, find out how I can be contacted <Link to={Paths.CONTACT}>here</Link>.
+              service, find out how I can be contacted <Link to={paths.CONTACT}>here</Link>.
             </div>
           </div>
         </div>
