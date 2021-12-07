@@ -111,10 +111,12 @@ const ProjectsPage = () => (
                       className="demo-expanded-td"
                     >
                       <div className={bem('extended-project-info')}>
-                        <div className={bem('row')}>
-                          <h6>Outline</h6>
-                          <div>{outline}</div>
-                        </div>
+                        {outline && (
+                          <div className={bem('row')}>
+                            <h6>Outline</h6>
+                            <div>{outline}</div>
+                          </div>
+                        )}
                         {tags.length > 0 && (
                           <div className={bem('row')}>
                             <h6>Tags</h6>

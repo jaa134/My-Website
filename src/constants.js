@@ -50,3 +50,10 @@ export const PDF_MAX_WIDTH = 1000;
 export const PDF_RATIO = 1.2935;
 export const PDF_PADDING = 64;
 export const PDF_SPACING = 16;
+
+export const tagTypes = {
+  LANGUAGE: 'language',
+  TECHNOLOGY: 'technology',
+  SERVICE: 'service',
+  DEV_PRACTICE: 'devPractice'
+};
