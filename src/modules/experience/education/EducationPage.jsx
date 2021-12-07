@@ -28,47 +28,50 @@ const bem = defineBlock('EducationPage');
 
 const EducationPage = () => (
   <div className={bem()}>
-    <div className={bem('uni-info', 'CWRU')}>
-      <Link
-        className={bem('uni-logo')}
-        href={links.CWRU}
-        target="_blank"
-        rel="noreferrer"
-      >
-        <img
-          src="images/CWRU_logo.svg"
-          alt="profile"
-        />
-      </Link>
-      <div className={bem(['uni-row', 'graduation'])}>Graduated in spring 2019</div>
-      <div className={bem(['uni-row', 'degree'])}>
-        B.S. in computer science<span className={bem('gpa')}>(3.634 / 4.0)</span>
-      </div>
-      <div className={bem(['uni-row', 'intent'])}>Intent for software engineering in industry</div>
-    </div>
-    <div className={bem('uni-info', 'UCT')}>
-      <Link
-        className={bem('uni-logo')}
-        href={links.UCT}
-        target="_blank"
-        rel="noreferrer"
-      >
-        <img
-          src="images/UCT_logo.gif"
-          alt="profile"
-        />
-      </Link>
-      <div className={bem(['uni-row', 'reason'])}>
+    <div className={bem('universities')}>
+      <div className={bem('uni-info', 'CWRU')}>
         <Link
-          href={links.IES}
+          className={bem('uni-logo')}
+          href={links.CWRU}
           target="_blank"
           rel="noreferrer"
         >
-          IES Study Abroad
-        </Link> program in South Africa
+          <img
+            src="images/CWRU_logo.svg"
+            alt="profile"
+          />
+        </Link>
+        <div className={bem(['uni-row', 'graduation'])}>Graduated in spring 2019, Cum Laude</div>
+        <div className={bem(['uni-row', 'degree'])}>
+          B.S. in computer science<span className={bem('gpa')}>(3.634 / 4.0)</span>
+        </div>
+        <div className={bem(['uni-row', 'intent'])}>Intent for software engineering in industry</div>
       </div>
-      <div className={bem(['uni-row', 'attendance'])}>Attended in spring 2017</div>
-      <div className={bem(['uni-row', 'intent'])}>Studied humanities and environmental sciences</div>
+      <div className={bem('uni-spacer')} />
+      <div className={bem('uni-info', 'UCT')}>
+        <Link
+          className={bem('uni-logo')}
+          href={links.UCT}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            src="images/UCT_logo.gif"
+            alt="profile"
+          />
+        </Link>
+        <div className={bem(['uni-row', 'reason'])}>
+          <Link
+            href={links.IES}
+            target="_blank"
+            rel="noreferrer"
+          >
+            IES Study Abroad
+          </Link> program in South Africa
+        </div>
+        <div className={bem(['uni-row', 'attendance'])}>Attended in spring 2017</div>
+        <div className={bem(['uni-row', 'intent'])}>Studied humanities and environmental sciences</div>
+      </div>
     </div>
     <DataTable headers={headerData} rows={rowData} isSortable>
       {({
@@ -167,18 +170,19 @@ const EducationPage = () => (
                         {rowLinks.length > 0 && (
                           <div className={bem('row')}>
                             <h6>Links</h6>
-                            <div>
+                            <ul className={bem('row-links')}>
                               {rowLinks.map(({ displayText, href }) => (
-                                <Link
-                                  key={displayText}
-                                  href={href}
-                                  target="_blank"
-                                  rel="noreferrer"
-                                >
-                                  {displayText}
-                                </Link>
+                                <li key={displayText}>
+                                  <Link
+                                    href={href}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                  >
+                                    {displayText}
+                                  </Link>
+                                </li>
                               ))}
-                            </div>
+                            </ul>
                           </div>
                         )}
                         {comment && (

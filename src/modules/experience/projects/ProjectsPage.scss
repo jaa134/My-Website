@@ -1,3 +1,64 @@
+@import '@carbon/colors/scss/colors';
+
 .ProjectsPage {
-  text-align: center;
+  &__description {
+    max-width: 300px;
+    padding: 0.5rem 0;
+  }
+  &__status-container {
+    display: flex;
+    align-items: center;
+  }
+  &__status {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background: black;
+    margin-right: 0.75rem;
+    &--Complete {
+      background-color: $ibm-color__green-50;
+    }
+    &--Active {
+      background-color: $ibm-color__blue-50;
+    }
+    &--Paused {
+      background-color: $ibm-color__gray-40;
+    }
+  }
+  &__extended-project-info {
+    padding: 1rem 0;
+  }
+  &__row {
+    &:not(:last-child) {
+      padding-bottom: 0.5rem;
+    }
+  }
+  &__row-links {
+    list-style: disc;
+    margin-left: 1rem;
+  }
+  &__tags-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__tag {
+    background-color: $ibm-color__gray-20;
+    padding: 0.25rem 0.75rem;
+    margin: 0.33rem 0.33rem 0 0;
+    border-radius: 0.75rem;
+    color: $ibm-color__gray-100;
+    &--language {
+      background-color: $ibm-color__blue-30;
+    }
+    &--technology {
+      background-color: $ibm-color__green-30;
+    }
+    &--service {
+      background-color: $ibm-color__yellow-20;
+    }
+    &--devPractice {
+      background-color: $ibm-color__red-40;
+    }
+  }
 }

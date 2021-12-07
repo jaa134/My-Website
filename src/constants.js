@@ -18,6 +18,7 @@ export const LOCATION = 'Littleton, Colorado 80128';
 export const links = {
   LINKEDIN: 'https://www.linkedin.com/in/jacob-alspaw',
   GITHUB: 'https://github.com/jaa134',
+  REPOS: 'https://github.com/jaa134?tab=repositories',
   FACEBOOK: 'https://www.facebook.com/jacobalexander.alspaw',
   INSTAGRAM: 'https://www.instagram.com/jacobalspaw',
   TWITTER: 'https://twitter.com/JacobAlspaw',

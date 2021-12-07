@@ -1,14 +1,30 @@
 @import '@carbon/colors/scss/colors';
 
 .EducationPage {
+  &__universities {
+    display: flex;
+    margin-bottom: 3rem;
+    @media screen and (max-width: 1450px) {
+      flex-direction: column;
+    }
+  }
+  &__uni-spacer {
+    width: 1rem;
+    height: 1rem;
+  }
   &__uni-info {
+    flex: 1;
     padding: 1rem 2rem;
-    margin: 0 0 1rem 0;
     background-color: white;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-    &--UCT {
-      margin-bottom: 4rem;
+    &--CWRU {
       img {
+        height: 5rem;
+      }
+    }
+    &--UCT {
+      img {
+        height: 5.5rem;
         margin-bottom: -0.5rem;
       }
     }
@@ -27,9 +43,6 @@
     &:hover, &:focus {
       outline: 1px solid $ibm-color__blue-60;
       outline-offset: 0.5rem;
-    }
-    img {
-      width: 35rem;
     }
   }
   &__gpa {
@@ -56,12 +69,16 @@
     }
   }
   &__extended-course-info {
-    padding: 0.75rem 0;
+    padding: 1rem 0;
   }
   &__row {
     &:not(:last-child) {
       padding-bottom: 0.5rem;
     }
+  }
+  &__row-links {
+    list-style: disc;
+    margin-left: 1rem;
   }
   &__quick-detail {
     display: inline-block;
