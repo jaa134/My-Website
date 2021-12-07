@@ -121,7 +121,7 @@ const EducationPage = () => (
               {rows.map((row) => {
                 const { id, cells } = row;
                 const {
-                  department, instructor, description, links: rowLinks, comment
+                  termDisplayText, department, instructor, description, links: rowLinks, comment
                 } = rowDataExtended[id];
                 return (
                   <Fragment key={id}>
@@ -134,7 +134,7 @@ const EducationPage = () => (
                         )}
                       </TableCell>
                       <TableCell key={cells[1].id}>
-                        {cells[1].value}
+                        {termDisplayText}
                       </TableCell>
                       <TableCell key={cells[2].id}>
                         {cells[2].value}
