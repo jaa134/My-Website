@@ -38,7 +38,7 @@ const EducationPage = () => (
         >
           <img
             src="images/CWRU_logo.svg"
-            alt="profile"
+            alt="CWRU logo"
           />
         </Link>
         <div className={bem(['uni-row', 'graduation'])}>Graduated in spring 2019, Cum Laude</div>
@@ -57,7 +57,7 @@ const EducationPage = () => (
         >
           <img
             src="images/UCT_logo.png"
-            alt="profile"
+            alt="UCT logo"
           />
         </Link>
         <div className={bem(['uni-row', 'reason'])}>
