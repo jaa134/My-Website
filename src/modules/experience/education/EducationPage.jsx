@@ -56,7 +56,7 @@ const EducationPage = () => (
           rel="noreferrer"
         >
           <img
-            src="images/UCT_logo.gif"
+            src="images/UCT_logo.png"
             alt="profile"
           />
         </Link>

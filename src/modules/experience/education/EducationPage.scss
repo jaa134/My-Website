@@ -17,17 +17,6 @@
     padding: 1rem 2rem;
     background-color: white;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-    &--CWRU {
-      img {
-        height: 5rem;
-      }
-    }
-    &--UCT {
-      img {
-        height: 5.5rem;
-        margin-bottom: -0.5rem;
-      }
-    }
   }
   &__uni-row {
     line-height: 1.5rem;
@@ -43,6 +32,9 @@
     &:hover, &:focus {
       outline: 1px solid $ibm-color__blue-60;
       outline-offset: 0.5rem;
+    }
+    img {
+      height: 5rem;
     }
   }
   &__gpa {
