@@ -37,4 +37,10 @@
   &__side-link--active .bx--header__menu-item {
     border-left: 2px solid $ibm-color__blue-60;
   }
+  &--mobile {
+    .bx--side-nav__overlay-active {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }

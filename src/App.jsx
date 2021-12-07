@@ -5,6 +5,7 @@ import {
   Navigate,
   useLocation
 } from 'react-router-dom';
+import { isMobile } from 'react-device-detect';
 import LocationPerson20 from '@carbon/icons-react/lib/location--person/20';
 import Phone20 from '@carbon/icons-react/lib/phone/20';
 import Email20 from '@carbon/icons-react/lib/email/20';
@@ -47,7 +48,7 @@ import './App.scss';
 const bem = defineBlock('App');
 
 const App = () => (
-  <div className={bem()}>
+  <div className={bem('', { mobile: isMobile })}>
     <HeaderContainer
       render={({ isSideNavExpanded, onClickSideNavExpand }) => {
         const { pathname: currentPath } = useLocation();
@@ -83,15 +84,17 @@ const App = () => (
                 <HeaderMenuItem {...getLinkProps('main-link', paths.CONTACT)}>Contact</HeaderMenuItem>
               </HeaderNavigation>
               <HeaderGlobalBar>
-                <HeaderGlobalAction aria-label="Location" onClick={() => { setMapModalOpen(true); }}>
-                  <LocationPerson20 />
-                </HeaderGlobalAction>
-                <HeaderGlobalAction aria-label="Phone" onClick={() => { setPhoneModalOpen(true); }}>
-                  <Phone20 />
-                </HeaderGlobalAction>
-                <HeaderGlobalAction aria-label="Email" onClick={() => { setEmailModalOpen(true); }}>
-                  <Email20 />
-                </HeaderGlobalAction>
+                {!isMobile && ([
+                  <HeaderGlobalAction key="Location" aria-label="Location" onClick={() => { setMapModalOpen(true); }}>
+                    <LocationPerson20 />
+                  </HeaderGlobalAction>,
+                  <HeaderGlobalAction key="Phone" aria-label="Phone" onClick={() => { setPhoneModalOpen(true); }}>
+                    <Phone20 />
+                  </HeaderGlobalAction>,
+                  <HeaderGlobalAction key="Email" aria-label="Email" onClick={() => { setEmailModalOpen(true); }}>
+                    <Email20 />
+                  </HeaderGlobalAction>
+                ])}
                 <HeaderGlobalAction
                   aria-label="Applications"
                   tooltipAlignment="end"
