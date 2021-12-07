@@ -1,3 +1,50 @@
+@import '@carbon/colors/scss/colors';
+
 .EmploymentPage {
-  text-align: center;
+  &__intro {
+    padding: 1.5rem;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    border-left: 6px solid $ibm-color__green-50;
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__achievements {
+    list-style: disc;
+    font-size: 1rem;
+    padding: 1rem 0 0 1rem;
+  }
+  &__achievement {
+    margin-bottom: 0.33rem;
+    line-height: 1.125rem;
+  }
+  &__section {
+    padding: 1.5rem;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    border-left: 6px solid $ibm-color__blue-50;
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__dates {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+  &__role {
+    padding: 1rem 0;
+  }
+  &__name {
+    margin-bottom: 0.25rem;
+  }
+  &__duties {
+    list-style: disc;
+    font-size: 1rem;
+    padding-left: 2rem;
+  }
+  &__duty {
+    margin-bottom: 0.33rem;
+    line-height: 1.125rem;
+  }
 }

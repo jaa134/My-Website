@@ -49,7 +49,7 @@ const renderSkills = (skills) => (
   })
 );
 
-const renderSkillsSection = (title, skills) => (
+const renderSection = (title, skills) => (
   <div className={bem('section')}>
     <h3 className={bem('title')}>
       {title}
@@ -62,11 +62,11 @@ const renderSkillsSection = (title, skills) => (
 
 const SkillsPage = () => (
   <div className={bem()}>
-    {renderSkillsSection('Languages', languages)}
-    {renderSkillsSection('Technologies', technologies)}
-    {renderSkillsSection('Services', services)}
-    {renderSkillsSection('Development practices', devPractices)}
-    {renderSkillsSection('Other', other)}
+    {renderSection('Languages', languages)}
+    {renderSection('Technologies', technologies)}
+    {renderSection('Services', services)}
+    {renderSection('Development practices', devPractices)}
+    {renderSection('Other', other)}
   </div>
 );
 
