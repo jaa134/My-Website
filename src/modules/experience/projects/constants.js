@@ -250,8 +250,14 @@ export const rowDataExtended = {
       name: 'CSS',
       type: tagTypes.LANGUAGE
     }, {
+      name: 'C++',
+      type: tagTypes.LANGUAGE
+    }, {
       name: 'NoSQL',
       type: tagTypes.LANGUAGE
+    }, {
+      name: 'ARP requests',
+      type: tagTypes.TECHNOLOGY
     }, {
       name: 'MongoDB',
       type: tagTypes.TECHNOLOGY
