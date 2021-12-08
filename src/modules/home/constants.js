@@ -84,10 +84,6 @@ export const photos = [{
   width: 4032,
   height: 3024
 }, {
-  src: `${albumPath}/1EUNUbourI.jpg`,
-  width: 4032,
-  height: 3024
-}, {
   src: `${albumPath}/2NGU67BWMo.jpg`,
   width: 3024,
   height: 4032
@@ -107,10 +103,6 @@ export const photos = [{
   src: `${albumPath}/m2zOmedogZ.jpg`,
   width: 4032,
   height: 3024
-}, {
-  src: `${albumPath}/Apf6uGUb8d.jpg`,
-  width: 3354,
-  height: 4494
 }, {
   src: `${albumPath}/LZpz9AcjCe.jpg`,
   width: 1600,
