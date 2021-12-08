@@ -64,7 +64,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-        <Gallery photos={photos} onClick={openLightbox} />;
+        <Gallery photos={photos} onClick={openLightbox} />
         <ModalGateway>
           {viewerIsOpen ? (
             <Modal onClose={closeLightbox}>
