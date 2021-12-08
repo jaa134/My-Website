@@ -581,7 +581,7 @@ export const rowDataExtended = {
     }]
   },
   [projects.CHALLENGES]: {
-    startedDisplayText: 'Febuary, 2019',
+    startedDisplayText: 'February, 2019',
     finishedDisplayText: '-',
     outline: '',
     tags: [{
@@ -639,8 +639,8 @@ export const rowDataExtended = {
     }]
   },
   [projects.INSTANT_MESSENGER]: {
-    startedDisplayText: 'Febuary, 2016',
-    finishedDisplayText: 'Febuary, 2016',
+    startedDisplayText: 'February, 2016',
+    finishedDisplayText: 'February, 2016',
     outline: '',
     tags: [{
       name: 'Java',

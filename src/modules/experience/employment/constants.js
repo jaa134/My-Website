@@ -510,7 +510,7 @@ export const jobs = {
   LYGENT: {
     company: 'Lygent',
     start: 'April 2015',
-    end: 'Febuary 2016',
+    end: 'February 2016',
     roles: [{
       name: 'Lead developer',
       duties: [
@@ -536,7 +536,7 @@ export const jobs = {
   },
   TUTOR: {
     company: 'Case Wetern Reserve University',
-    start: 'Januaury 2016',
+    start: 'January 2016',
     end: 'May 2019',
     roles: [{
       name: 'Teaching assistant / peer tutor',
@@ -559,7 +559,7 @@ export const jobs = {
   },
   WEBMASTER: {
     company: 'Delta Sigma Phi - CWRU',
-    start: 'Januaury 2015',
+    start: 'January 2015',
     end: 'December 2016',
     roles: [{
       name: 'Webmaster',
