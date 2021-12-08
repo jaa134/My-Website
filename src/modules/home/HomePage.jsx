@@ -70,11 +70,15 @@ const HomePage = () => {
             <Modal onClose={closeLightbox}>
               <Carousel
                 currentIndex={currentImage}
-                views={photos.map((x) => ({
-                  ...x,
-                  srcset: x.srcSet,
-                  caption: x.title
-                }))}
+                views={photos.map(({ src, ...rest }) => {
+                  const extensionStart = src.indexOf('.');
+                  const newSrc = `${src.substr(0, extensionStart)}--large${src.substr(extensionStart)}`;
+                  return {
+                    ...rest,
+                    src: newSrc,
+                    caption: rest.title
+                  };
+                })}
               />
             </Modal>
           ) : null}

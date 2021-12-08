@@ -130,7 +130,7 @@ export const photos = [{
 }, {
   src: `${albumPath}/Xyo1sW6Ysx.jpg`,
   width: 2048,
-  height: 1365 
+  height: 1365
 }, {
   src: `${albumPath}/dSQnM1nANp.jpg`,
   width: 3024,
