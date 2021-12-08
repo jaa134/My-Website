@@ -24,10 +24,6 @@ export const photos = [{
   width: 2247,
   height: 3024
 }, {
-  src: `${albumPath}/DQRFjLD1r9.jpg`,
-  width: 3024,
-  height: 4032
-}, {
   src: `${albumPath}/xhEZaOycWJ.jpg`,
   width: 6000,
   height: 4000
@@ -36,13 +32,13 @@ export const photos = [{
   width: 3354,
   height: 4494
 }, {
-  src: `${albumPath}/m2zOmedogZ.jpg`,
-  width: 4032,
-  height: 3024
-}, {
   src: `${albumPath}/gHIfkZqH7P.jpg`,
   width: 3088,
   height: 2316
+}, {
+  src: `${albumPath}/GK6GvUHSho.jpg`,
+  width: 3024,
+  height: 4032
 }, {
   src: `${albumPath}/rhSI0TIP7Q.jpg`,
   width: 3000,
@@ -51,6 +47,10 @@ export const photos = [{
   src: `${albumPath}/kW1CYFV8ra.jpg`,
   width: 3000,
   height: 2000
+}, {
+  src: `${albumPath}/PdIXNLbgsz.jpg`,
+  width: 3024,
+  height: 4032
 }, {
   src: `${albumPath}/a8w4c2lSCT.jpg`,
   width: 1440,
@@ -92,6 +92,10 @@ export const photos = [{
   width: 3024,
   height: 4032
 }, {
+  src: `${albumPath}/DQRFjLD1r9.jpg`,
+  width: 3024,
+  height: 4032
+}, {
   src: `${albumPath}/61ZiKMAT7f.jpg`,
   width: 6462,
   height: 4327
@@ -100,21 +104,17 @@ export const photos = [{
   width: 4032,
   height: 3024
 }, {
+  src: `${albumPath}/m2zOmedogZ.jpg`,
+  width: 4032,
+  height: 3024
+}, {
   src: `${albumPath}/Apf6uGUb8d.jpg`,
   width: 3354,
   height: 4494
 }, {
-  src: `${albumPath}/GK6GvUHSho.jpg`,
-  width: 3024,
-  height: 4032
-}, {
   src: `${albumPath}/LZpz9AcjCe.jpg`,
   width: 1600,
   height: 1199
-}, {
-  src: `${albumPath}/PdIXNLbgsz.jpg`,
-  width: 3024,
-  height: 4032
 }, {
   src: `${albumPath}/RHwrqHjiMn.jpg`,
   width: 4032,
