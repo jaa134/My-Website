@@ -20,7 +20,7 @@ export const links = {
   GITHUB: 'https://github.com/jaa134',
   REPOS: 'https://github.com/jaa134?tab=repositories',
   FACEBOOK: 'https://www.facebook.com/jacobalexander.alspaw',
-  INSTAGRAM: 'https://www.instagram.com/jacobalspaw',
+  INSTAGRAM: 'https://www.instagram.com/jacobalspaw/',
   TWITTER: 'https://twitter.com/JacobAlspaw',
   CWRU: 'https://case.edu/',
   UCT: 'https://www.uct.ac.za/',
