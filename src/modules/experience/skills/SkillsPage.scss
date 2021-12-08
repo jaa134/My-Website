@@ -1,6 +1,9 @@
 @import '@carbon/colors/scss/colors';
 
 .SkillsPage {
+  &__construction-notification.bx--inline-notification {
+    margin: 0 0 2rem 0;
+  }
   &__section {
     &:not(:last-child)  {
       padding-bottom: 4rem;

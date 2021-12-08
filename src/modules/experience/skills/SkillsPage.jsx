@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react';
-import { Link } from 'carbon-components-react';
+import React from 'react';
+import { InlineNotification, Link } from 'carbon-components-react';
 import defineBlock from '../../../utils/defineBlock';
 import {
   devPractices,
@@ -62,6 +62,16 @@ const renderSection = (title, skills) => (
 
 const SkillsPage = () => (
   <div className={bem()}>
+    <InlineNotification
+      className={bem('construction-notification')}
+      kind="info"
+      title="Heads up!"
+      subtitle="This content is still being developed."
+      statusIconDescription="Information"
+      role="alert"
+      hideCloseButton
+      lowContrast
+    />
     {renderSection('Languages', languages)}
     {renderSection('Technologies', technologies)}
     {renderSection('Services', services)}
