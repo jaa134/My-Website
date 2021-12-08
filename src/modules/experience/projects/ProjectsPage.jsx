@@ -120,7 +120,7 @@ const ProjectsPage = () => (
                         {tags.length > 0 && (
                           <div className={bem('row')}>
                             <h6>Tags</h6>
-                            <div className={bem('tags-container')}>
+                            <div className={bem('tags')}>
                               {tags.map(({ name, type }) => (
                                 <span key={name} className={bem('tag', type)}>{name}</span>
                               ))}

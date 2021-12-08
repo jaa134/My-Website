@@ -81,6 +81,10 @@ export const technologies = [{
   href: 'https://www.apollographql.com/',
   imagePath: ''
 }, {
+  displayText: 'GraphQL Shield',
+  href: 'https://www.graphql-shield.com/',
+  imagePath: ''
+}, {
   displayText: 'Express',
   href: 'https://expressjs.com/',
   imagePath: ''
@@ -157,8 +161,12 @@ export const technologies = [{
   href: 'https://www.adobe.com/products/photoshop.html',
   imagePath: ''
 }, {
-  displayText: 'Icomoon',
+  displayText: 'IcoMoon',
   href: 'https://icomoon.io/',
+  imagePath: ''
+}, {
+  displayText: 'Raspberry Pi',
+  href: 'https://www.raspberrypi.org/',
   imagePath: ''
 }];
 

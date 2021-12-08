@@ -6,9 +6,12 @@ import './EmploymentPage.scss';
 const bem = defineBlock('EmploymentPage');
 
 const renderSection = ({
-  company, start, end, roles
+  isAcademic, company, start, end, tags, roles
 }) => (
   <div className={bem('section')}>
+    {isAcademic && (
+      <div className={bem('academic')}>*Academic exercise only</div>
+    )}
     <div className={bem('dates')}>
       {start} - {end}
     </div>
@@ -27,13 +30,22 @@ const renderSection = ({
         </ul>
       </div>
     ))}
+    {tags.length > 0 && (
+      <div className={bem('row')}>
+        <div className={bem('tags')}>
+          {tags.map(({ name, type }) => (
+            <span key={name} className={bem('tag', type)}>{name}</span>
+          ))}
+        </div>
+      </div>
+    )}
   </div>
 );
 
 const EmploymentPage = () => (
   <div className={bem()}>
     <div className={bem('intro')}>
-      <h3>My career achievements</h3>
+      <h3>Career achievements and highlights</h3>
       <ul className={bem('achievements')}>
         {achievements.map((achievement) => (
           <li key={achievement} className={bem('achievement')}>{achievement}</li>
@@ -42,6 +54,14 @@ const EmploymentPage = () => (
     </div>
     {renderSection(jobs.ACCELERATE)}
     {renderSection(jobs.LAUNCH)}
+    {renderSection(jobs.L3_SUPPORT)}
+    {renderSection(jobs.MATRIX)}
+    {renderSection(jobs.CWRUDED)}
+    {renderSection(jobs.SYNCHRONY)}
+    {renderSection(jobs.PICLOCK)}
+    {renderSection(jobs.LYGENT)}
+    {renderSection(jobs.TUTOR)}
+    {renderSection(jobs.WEBMASTER)}
   </div>
 );
 

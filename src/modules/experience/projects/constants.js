@@ -231,7 +231,7 @@ export const rowDataExtended = {
   [projects.CWRUDED]: {
     startedDisplayText: 'August, 2019',
     finishedDisplayText: '-',
-    outline: 'I designed and developed a data-driven web service and iOS mobile application with senior university faculty that computed and conveyed real-time “busyness” metrics for various locations around campus. My solution leveraged address resolution protocol (ARP) and the Cisco Prime Infrastructure API that manages CWRU wireless network to expose and aggregate unique active clients connected to wireless access points throughout campus. While I was working on this project, I planned and lead meetings with campus deans, network admins, and the IT marketing team as part of an effort to make my service available to students. I tried to create a startup from this project, but these plans were put on hold due to concerns about data privacy.',
+    outline: 'I designed and developed a data-driven web service and iOS mobile application with senior university faculty to compute and convey real-time “busyness” metrics for various locations around campus. My solution leveraged address resolution protocol (ARP) and the Cisco Prime Infrastructure API that manages CWRU wireless network to expose and aggregate unique active clients connected to wireless access points throughout campus. While I was working on this project, I planned and lead meetings with campus deans, network admins, and the IT marketing team as part of an effort to make my product available to students. I tried to create a startup for this project, but plans were put on hold due to concerns about data privacy.',
     tags: [{
       name: 'Swift',
       type: tagTypes.LANGUAGE

@@ -5,7 +5,7 @@
     padding: 1.5rem;
     background-color: white;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-    border-left: 6px solid $ibm-color__green-50;
+    border-left: 6px solid $ibm-color__blue-50;
     &:not(:last-child) {
       margin-bottom: 1.5rem;
     }
@@ -23,14 +23,43 @@
     padding: 1.5rem;
     background-color: white;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-    border-left: 6px solid $ibm-color__blue-50;
+    border-left: 6px solid $ibm-color__gray-40;
     &:not(:last-child) {
       margin-bottom: 1.5rem;
     }
   }
+  &__academic {
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
   &__dates {
     font-size: 1rem;
     margin-bottom: 0.25rem;
+  }
+  &__tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__tag {
+    background-color: $ibm-color__gray-20;
+    padding: 0.25rem 0.75rem;
+    margin: 0.33rem 0.33rem 0 0;
+    border-radius: 0.75rem;
+    color: $ibm-color__gray-100;
+    &--language {
+      background-color: $ibm-color__blue-30;
+    }
+    &--technology {
+      background-color: $ibm-color__green-30;
+    }
+    &--service {
+      background-color: $ibm-color__yellow-20;
+    }
+    &--devPractice {
+      background-color: $ibm-color__red-40;
+    }
   }
   &__role {
     padding: 1rem 0;
@@ -44,7 +73,9 @@
     padding-left: 2rem;
   }
   &__duty {
-    margin-bottom: 0.33rem;
     line-height: 1.125rem;
+    &:not(:last-child) {
+      margin-bottom: 0.33rem;
+    }
   }
 }
