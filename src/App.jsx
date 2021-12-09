@@ -96,7 +96,7 @@ const App = () => (
                   </HeaderGlobalAction>
                 ])}
                 <HeaderGlobalAction
-                  aria-label="Applications"
+                  aria-label="Socials"
                   tooltipAlignment="end"
                   isActive={rightPanelExpanded}
                   onClick={() => { setRightPanelExpanded(!rightPanelExpanded); }}
