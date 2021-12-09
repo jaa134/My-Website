@@ -2,7 +2,7 @@
 
 .EmploymentPage {
   &__intro {
-    padding: 1.5rem;
+    padding: 2rem;
     background-color: white;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
     border-left: 6px solid $ibm-color__blue-50;
@@ -13,14 +13,14 @@
   &__achievements {
     list-style: disc;
     font-size: 1rem;
-    padding: 1rem 0 0 1rem;
+    padding: 1rem 0 0 2rem;
   }
   &__achievement {
     margin-bottom: 0.33rem;
     line-height: 1.125rem;
   }
   &__section {
-    padding: 1.5rem;
+    padding: 2rem;
     background-color: white;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
     border-left: 6px solid $ibm-color__gray-40;

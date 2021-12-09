@@ -29,7 +29,7 @@ export const jobs = {
     }, {
       name: 'Full stack developer',
       duties: [
-        'Routinely writes and manages features using React, Sass, Node, Apollo, GraphQL, MongoDB, and Git',
+        'Routinely develops features using React, Sass, Node, Apollo, GraphQL, MongoDB, and Git',
         'Converted existing and new components to TypeScript to improve overall code-quality and robustness',
         'Incorporated automated, end-to-end browser tests for existing and new user scenarios with TestCafe',
         'Always strives to acheive test code coverage of at least 80% before submitting items for review',
@@ -132,11 +132,11 @@ export const jobs = {
     }, {
       name: 'Full stack developer',
       duties: [
-        'Routinely writes and manages features using Ant, Dojo toolkit, Sass, Hibernate, and various database management systems.',
+        'Routinely devloped features using Ant, Dojo toolkit, Sass, Hibernate, and various database management systems.',
         'Converted existing and new components to TypeScript to improve overall code-quality and robustness',
         'Incorporated automated, end-to-end browser tests for existing and new user scenarios with TestCafe',
-        'Always strives to acheive test code coverage of at least 80% before submitting items for review',
-        'Participates in daily scrum by providing progress reports, answering questions, and giving feedback'
+        'Always strove to acheive test code coverage of at least 80% before submitting items for review',
+        'Participated in daily scrum by providing progress reports, answering questions, and giving feedback'
       ]
     }],
     tags: [{
@@ -219,7 +219,10 @@ export const jobs = {
       duties: [
         'Collaborated as part of an international support team with IBM and HCL engineers to maintain company relations and meet SLA on issues that impact millions of dollars in financial investments',
         'Maintained personal relationships with high-profile customer accounts that need a dedicated advocate for their issues',
-        'Identified a variety of issues that customers faced such as Java JRE bugs, network connectivity issues, licensing issues, and more'
+        'Identified a variety of issues that customers faced such as Java JRE bugs, network connectivity issues, licensing issues, product defects, and more',
+        'Often provided patches to customers when solutions to product defects could be identified',
+        'Helped customers devise and enact plans for upgrading our product across multiple testing environments to ensure integrity of upgrade processes and customer data',
+        'Was available for 24/7 on-call services in the event of severity 1 tickets that critically impacted customer investments'
       ]
     }],
     tags: [{
@@ -248,7 +251,7 @@ export const jobs = {
       duties: [
         'Developed a suite of web applications that streamline the justice system and connect law enforcement agencies, prosecutors, courts, and defense attorneys in 50+ counties across Ohio',
         'Routinely performed full-stack feature development on both new and existing features using ASP.NET MVC, SQL Server databases, jQuery, KnockoutJS, and Mercurial Hg',
-        'Wrote a time-tracking widget for Microsoft VSTS that integrated with an in-house employee payroll system. The widget allowed users to more accurately record time',
+        'Wrote a time-tracking widget for Microsoft VSTS that integrated with an in-house employee payroll system, allowing users to more accurately record time',
         'Invited back for multiple full-time internships and cooperative educational program\'s',
         'Worked part-time during school and later offered full-time position after graduation',
         'Awarded $2,500 scholarship for continued education in acknowledgment of product contributions'
@@ -324,7 +327,7 @@ export const jobs = {
     start: 'August 2018',
     end: 'May 2019',
     roles: [{
-      name: 'Founder / lead developer',
+      name: 'Founder / Lead developer',
       duties: [
         'Designed and developed a data-driven web service and mobile application with senior university faculty to compute and convey real-time “busyness” metrics for various locations around campus',
         'Solution leveraged address resolution protocol (ARP) and Cisco Prime Infrastructure API that manages CWRU wireless network to expose and aggregate unique active clients connected to wireless access points throughout campus',
@@ -388,13 +391,13 @@ export const jobs = {
     start: 'August 2018',
     end: 'December 2018',
     roles: [{
-      name: 'Project manager / front-end lead',
+      name: 'Project manager / Front-end lead',
       duties: [
         'Developed a synchronized streaming service that enhances the music listening experience of users through shared playlist collaboration and discovery',
-        'Synchrony acts as wrapper to mainstream music providers by capturing and relaying their streams to lobbies where listening groups could communicate using real time communications and control playlists together in real-time',
+        'Synchrony acts as wrapper to mainstream music providers by capturing and relaying their streams to lobbies where listening groups could communicate using real time communications',
         'Directed team members throughout project duration to ensure project milestones were met, tested, and delivered on time',
         'Implemented a flexible UI (with Angular and Sass) that functions on most screen sizes without hassle',
-        'Awarded academic honors in spring of 2019 for best senior project of the year in the electrical engineering and computer science departments',
+        'Awarded academic honors in spring of 2019 for most outstanding senior project of the year in the electrical engineering and computer science departments',
         'Roughly a year later, Spotify implemented the same features within its own mobile application'
       ]
     }],
@@ -458,7 +461,7 @@ export const jobs = {
     start: 'August 2018',
     end: 'December 2018',
     roles: [{
-      name: 'Founder / lead developer',
+      name: 'Project manager / Lead developer',
       duties: [
         'Designed and developed a smart alarm clock that improves upon traditional alarm clocks by integrating new and useful technologies to motivate users to get out of bed on time',
         'System increases productivity by helping users overcome their early morning exhaustion and by providing general information about their upcoming day ',
@@ -539,11 +542,11 @@ export const jobs = {
     start: 'January 2016',
     end: 'May 2019',
     roles: [{
-      name: 'Teaching assistant / peer tutor',
+      name: 'Teaching assistant / Peer tutor',
       duties: [
         'Reinforced course work during tutoring sessions and recitations to boost students’ academic performance',
         'Customized instructional approaches to meet the academic needs of diverse clients across a variety of courses',
-        'Collaborated with faculty members to ensure lesson plans addressed students’ strengths/weaknesses'
+        'Collaborated with faculty members to ensure lesson plans addressed students\' strengths and weaknesses'
       ]
     }],
     tags: [{
