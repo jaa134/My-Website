@@ -21,7 +21,6 @@ const renderSkills = (skills) => (
           src={imagePath}
           alt="logo"
           height="80"
-          width="80"
         />
         <div className={bem('name')}>{displayText}</div>
       </>
@@ -62,16 +61,6 @@ const renderSection = (title, skills) => (
 
 const SkillsPage = () => (
   <div className={bem()}>
-    <InlineNotification
-      className={bem('construction-notification')}
-      kind="info"
-      title="Heads up!"
-      subtitle="This content is still being developed."
-      statusIconDescription="Information"
-      role="alert"
-      hideCloseButton
-      lowContrast
-    />
     {renderSection('Languages', languages)}
     {renderSection('Technologies', technologies)}
     {renderSection('Services', services)}
