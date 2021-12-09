@@ -78,7 +78,7 @@ const App = () => (
                 [Alspaw]
               </HeaderName>
               <HeaderNavigation aria-label="Jacob [Alspaw]">
-                <HeaderMenuItem {...getLinkProps('main-link', paths.HOME)}>Profile</HeaderMenuItem>
+                <HeaderMenuItem {...getLinkProps('main-link', paths.HOME)}>About</HeaderMenuItem>
                 <HeaderMenuItem {...getLinkProps('main-link', paths.EXPERIENCE)}>Experience</HeaderMenuItem>
                 <HeaderMenuItem {...getLinkProps('main-link', paths.DOCUMENTS)}>Documents</HeaderMenuItem>
                 <HeaderMenuItem {...getLinkProps('main-link', paths.CONTACT)}>Contact</HeaderMenuItem>
@@ -111,7 +111,7 @@ const App = () => (
               >
                 <SideNavItems>
                   <HeaderSideNavItems>
-                    <HeaderMenuItem {...getLinkProps('side-link', paths.HOME)}>Profile</HeaderMenuItem>
+                    <HeaderMenuItem {...getLinkProps('side-link', paths.HOME)}>About</HeaderMenuItem>
                     <HeaderMenuItem {...getLinkProps('side-link', paths.EXPERIENCE)}>Experience</HeaderMenuItem>
                     <HeaderMenuItem {...getLinkProps('side-link', paths.DOCUMENTS)}>Documents</HeaderMenuItem>
                     <HeaderMenuItem {...getLinkProps('side-link', paths.CONTACT)}>Contact</HeaderMenuItem>

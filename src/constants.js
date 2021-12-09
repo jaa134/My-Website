@@ -1,5 +1,5 @@
 export const paths = {
-  HOME: '/profile',
+  HOME: '/about',
   EXPERIENCE: '/experience',
   SKILLS: '/skills',
   EMPLOYMENT: '/employment',
