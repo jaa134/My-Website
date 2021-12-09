@@ -1,5 +1,5 @@
 import React from 'react';
-import { InlineNotification, Link } from 'carbon-components-react';
+import { Link } from 'carbon-components-react';
 import defineBlock from '../../../utils/defineBlock';
 import {
   devPractices,
