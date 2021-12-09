@@ -30,7 +30,7 @@ const HomePage = () => {
         <div className={bem('info')}>
           <div className={bem('name')}>Jacob Alspaw</div>
           <div className={bem('jobs')}>
-            <div className={bem('title')}>Front End Lead,</div>
+            <div className={bem('title')}>Front-End Lead,</div>
             <div className={bem('title')}>Full-Stack Software Developer</div>
           </div>
           <div className={bem('statement')}>

@@ -9,17 +9,12 @@ $image-width: 3.5rem;
   &__title {
     display: flex;
     align-items: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
   &__image {
-    width: $image-width;
-    svg {
-      fill: $ibm-color__gray-70;
-    }
-  }
-  &__content {
-    margin-left: $image-width;
-  }
-  &__subtitle {
-    color: $ibm-color__gray-70;
+    display: flex;
+    align-items: center;
+    width: 2.5rem;
   }
 }
