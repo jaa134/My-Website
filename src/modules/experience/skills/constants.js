@@ -96,9 +96,9 @@ export const technologies = [{
   href: 'https://expressjs.com/',
   imagePath: `${skillsPath}/Express.svg`
 }, {
-  displayText: 'Eslint',
+  displayText: 'ESLint',
   href: 'https://eslint.org/',
-  imagePath: `${skillsPath}/Eslint.svg`
+  imagePath: `${skillsPath}/ESLint.svg`
 }, {
   displayText: 'Webpack',
   href: 'https://webpack.js.org/',

@@ -193,7 +193,7 @@ export const rowDataExtended = {
       name: 'React',
       type: tagTypes.TECHNOLOGY
     }, {
-      name: 'Eslint',
+      name: 'ESLint',
       type: tagTypes.TECHNOLOGY
     }, {
       name: 'npm',

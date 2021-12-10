@@ -70,7 +70,7 @@ export const jobs = {
       name: 'MongoDB',
       type: tagTypes.TECHNOLOGY
     }, {
-      name: 'Eslint',
+      name: 'ESLint',
       type: tagTypes.TECHNOLOGY
     }, {
       name: 'npm',
@@ -167,7 +167,7 @@ export const jobs = {
       name: 'Hibernate',
       type: tagTypes.TECHNOLOGY
     }, {
-      name: 'Eslint',
+      name: 'ESLint',
       type: tagTypes.TECHNOLOGY
     }, {
       name: 'Ant',
