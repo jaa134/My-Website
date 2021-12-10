@@ -80,6 +80,10 @@ export const technologies = [{
   href: 'https://knockoutjs.com/',
   imagePath: `${skillsPath}/Knockout.svg`
 }, {
+  displayText: 'D3',
+  href: 'https://d3js.org/',
+  imagePath: `${skillsPath}/D3.svg`
+}, {
   displayText: 'Node.js',
   href: 'https://nodejs.org/en/',
   imagePath: `${skillsPath}/Node.svg`
@@ -99,6 +103,10 @@ export const technologies = [{
   displayText: 'ESLint',
   href: 'https://eslint.org/',
   imagePath: `${skillsPath}/ESLint.svg`
+}, {
+  displayText: 'Babel',
+  href: 'https://babeljs.io/',
+  imagePath: `${skillsPath}/Babel.svg`
 }, {
   displayText: 'Webpack',
   href: 'https://webpack.js.org/',
@@ -123,6 +131,26 @@ export const technologies = [{
   displayText: 'ASP.NET MVC',
   href: 'https://dotnet.microsoft.com/apps/aspnet/mvc',
   imagePath: `${skillsPath}/ASP.svg`
+}, {
+  displayText: 'Tomcat',
+  href: 'https://tomcat.apache.org/',
+  imagePath: `${skillsPath}/Tomcat.svg`
+}, {
+  displayText: 'Jersey',
+  href: 'https://eclipse-ee4j.github.io/jersey/',
+  imagePath: `${skillsPath}/Jersey.svg`
+}, {
+  displayText: 'Docker',
+  href: 'https://www.docker.com/',
+  imagePath: `${skillsPath}/Docker.svg`
+}, {
+  displayText: 'Jest',
+  href: 'https://jestjs.io/',
+  imagePath: `${skillsPath}/Jest.svg`
+}, {
+  displayText: 'TestCafe',
+  href: 'https://testcafe.io/',
+  imagePath: `${skillsPath}/TestCafe.svg`
 }, {
   displayText: 'Git',
   href: 'https://git-scm.com/',
@@ -229,6 +257,9 @@ export const devPractices = [{
   imagePath: `${skillsPath}/DevelopmentGeneral.svg`
 }, {
   displayText: 'UI/UX design review',
+  imagePath: `${skillsPath}/DevelopmentGeneral.svg`
+}, {
+  displayText: 'Backlog grooming',
   imagePath: `${skillsPath}/DevelopmentGeneral.svg`
 }];
 

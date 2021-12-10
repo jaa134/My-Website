@@ -58,6 +58,18 @@ export const jobs = {
       name: 'React',
       type: tagTypes.TECHNOLOGY
     }, {
+      name: 'D3',
+      type: tagTypes.TECHNOLOGY
+    }, {
+      name: 'ESLint',
+      type: tagTypes.TECHNOLOGY
+    }, {
+      name: 'Babel',
+      type: tagTypes.TECHNOLOGY
+    }, {
+      name: 'Webpack',
+      type: tagTypes.TECHNOLOGY
+    }, {
       name: 'Node',
       type: tagTypes.TECHNOLOGY
     }, {
@@ -70,7 +82,13 @@ export const jobs = {
       name: 'MongoDB',
       type: tagTypes.TECHNOLOGY
     }, {
-      name: 'ESLint',
+      name: 'Docker',
+      type: tagTypes.TECHNOLOGY
+    }, {
+      name: 'Jest',
+      type: tagTypes.TECHNOLOGY
+    }, {
+      name: 'TestCafe',
       type: tagTypes.TECHNOLOGY
     }, {
       name: 'npm',
@@ -164,10 +182,22 @@ export const jobs = {
       name: 'Dojo Toolkit',
       type: tagTypes.TECHNOLOGY
     }, {
+      name: 'ESLint',
+      type: tagTypes.TECHNOLOGY
+    }, {
+      name: 'Babel',
+      type: tagTypes.TECHNOLOGY
+    }, {
+      name: 'Webpack',
+      type: tagTypes.TECHNOLOGY
+    }, {
       name: 'Hibernate',
       type: tagTypes.TECHNOLOGY
     }, {
-      name: 'ESLint',
+      name: 'Tomcat',
+      type: tagTypes.TECHNOLOGY
+    }, {
+      name: 'Jersey',
       type: tagTypes.TECHNOLOGY
     }, {
       name: 'Ant',
