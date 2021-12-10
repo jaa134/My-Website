@@ -63,7 +63,7 @@ const App = () => (
         return (
           <>
             <Header className={bem('header')} aria-label="Jacob Alspaw">
-              <SkipToContent />
+              <SkipToContent href={`#${paths.HOME}`} />
               <HeaderMenuButton
                 aria-label="Open menu"
                 onClick={onClickSideNavExpand}
