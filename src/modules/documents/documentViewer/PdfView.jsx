@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { pdfjs, Document, Page } from 'react-pdf';
 import { SizeMe } from 'react-sizeme';
+import defineBlock from '../../../utils/defineBlock';
 import {
   PDF_MAX_WIDTH,
   PDF_RATIO,
   PDF_PADDING,
   PDF_SPACING
-} from '../../../constants';
-import defineBlock from '../../../utils/defineBlock';
+} from './constants';
 import PdfViewToolbar from './PdfViewToolbar';
 import PdfViewLoading from './PdfViewLoading';
 import PdfViewError from './PdfViewError';
@@ -23,10 +23,8 @@ const getPdfSize = (availableWidth) => {
 const bem = defineBlock('PdfView');
 
 const PdfView = ({
-  document: {
-    name: docName,
-    numPages
-  }
+  docName,
+  numPages
 }) => {
   const [hasError, setHasError] = useState(false);
   const onDocLoadError = () => {
@@ -78,10 +76,8 @@ const PdfView = ({
 };
 
 PdfView.propTypes = {
-  document: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    numPages: PropTypes.number.isRequired
-  }).isRequired
+  docName: PropTypes.string.isRequired,
+  numPages: PropTypes.number.isRequired
 };
 
 export default PdfView;

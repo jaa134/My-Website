@@ -4,10 +4,8 @@ export const paths = {
   SKILLS: '/skills',
   EMPLOYMENT: '/employment',
   PROJECTS: '/projects',
-  DOCUMENTS: '/documents',
   EDUCATION: '/education',
   RESUME: '/resume',
-  CV: '/cv',
   CONTACT: '/contact'
 };
 
@@ -34,22 +32,6 @@ export const handles = {
   INSTAGRAM: '@jacobalspaw',
   TWITTER: '@JacobAlspaw'
 };
-
-export const documents = {
-  RESUME: {
-    name: 'Alspaw-Jacob Resume.pdf',
-    numPages: 1
-  },
-  CV: {
-    name: 'Alspaw-Jacob CV.pdf',
-    numPages: 3
-  }
-};
-
-export const PDF_MAX_WIDTH = 1000;
-export const PDF_RATIO = 1.2935;
-export const PDF_PADDING = 64;
-export const PDF_SPACING = 16;
 
 export const tagTypes = {
   LANGUAGE: 'language',

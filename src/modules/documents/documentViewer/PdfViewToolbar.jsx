@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { Link } from 'carbon-components-react';
 import Maximize24 from '@carbon/icons-react/lib/maximize/20';
 import DocumentDownload24 from '@carbon/icons-react/lib/document--download/20';
-import { PDF_MAX_WIDTH } from '../../../constants';
 import defineBlock from '../../../utils/defineBlock';
+import { PDF_MAX_WIDTH } from './constants';
 import './PdfViewToolbar.scss';
 
 const bem = defineBlock('PdfViewToolbar');

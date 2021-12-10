@@ -41,7 +41,7 @@ import PhoneModal from './modules/modals/PhoneModal';
 import EmailModal from './modules/modals/EmailModal';
 import HomePage from './modules/home/HomePage';
 import ExperiencePage from './modules/experience/ExperiencePage';
-import DocumentsPage from './modules/documents/DocumentsPage';
+import ResumePage from './modules/documents/ResumePage';
 import ContactsPage from './modules/contacts/ContactsPage';
 import './App.scss';
 
@@ -80,7 +80,7 @@ const App = () => (
               <HeaderNavigation aria-label="Jacob [Alspaw]">
                 <HeaderMenuItem {...getLinkProps('main-link', paths.HOME)}>About</HeaderMenuItem>
                 <HeaderMenuItem {...getLinkProps('main-link', paths.EXPERIENCE)}>Experience</HeaderMenuItem>
-                <HeaderMenuItem {...getLinkProps('main-link', paths.DOCUMENTS)}>Documents</HeaderMenuItem>
+                <HeaderMenuItem {...getLinkProps('main-link', paths.RESUME)}>Resume</HeaderMenuItem>
                 <HeaderMenuItem {...getLinkProps('main-link', paths.CONTACT)}>Contact</HeaderMenuItem>
               </HeaderNavigation>
               <HeaderGlobalBar>
@@ -113,7 +113,7 @@ const App = () => (
                   <HeaderSideNavItems>
                     <HeaderMenuItem {...getLinkProps('side-link', paths.HOME)}>About</HeaderMenuItem>
                     <HeaderMenuItem {...getLinkProps('side-link', paths.EXPERIENCE)}>Experience</HeaderMenuItem>
-                    <HeaderMenuItem {...getLinkProps('side-link', paths.DOCUMENTS)}>Documents</HeaderMenuItem>
+                    <HeaderMenuItem {...getLinkProps('side-link', paths.RESUME)}>Resume</HeaderMenuItem>
                     <HeaderMenuItem {...getLinkProps('side-link', paths.CONTACT)}>Contact</HeaderMenuItem>
                   </HeaderSideNavItems>
                 </SideNavItems>
@@ -142,7 +142,7 @@ const App = () => (
               <Routes>
                 <Route path={paths.HOME} element={<HomePage />} exact />
                 <Route path={`${paths.EXPERIENCE}/*`} element={<ExperiencePage />} />
-                <Route path={`${paths.DOCUMENTS}/*`} element={<DocumentsPage />} />
+                <Route path={`${paths.RESUME}/*`} element={<ResumePage />} />
                 <Route path={paths.CONTACT} element={<ContactsPage />} />
                 <Route path="*" element={<Navigate replace to={paths.HOME} />} />
               </Routes>
