@@ -47,6 +47,11 @@ import './App.scss';
 
 const bem = defineBlock('App');
 
+const getLinkProps = (baseClassName, currentPath, path) => ({
+  className: bem(baseClassName, { active: isParentPath(path, currentPath) }),
+  href: `#${path}`
+});
+
 const App = () => (
   <div className={bem('', { mobile: isMobile })}>
     <HeaderContainer
@@ -56,10 +61,6 @@ const App = () => (
         const [isPhoneModalOpen, setPhoneModalOpen] = useState(false);
         const [isEmailModalOpen, setEmailModalOpen] = useState(false);
         const [rightPanelExpanded, setRightPanelExpanded] = useState(false);
-        const getLinkProps = (baseClassName, path) => ({
-          className: bem(baseClassName, { active: isParentPath(path, currentPath) }),
-          href: `#${path}`
-        });
         return (
           <>
             <Header className={bem('header')} aria-label="Jacob Alspaw">
@@ -78,10 +79,10 @@ const App = () => (
                 [Alspaw]
               </HeaderName>
               <HeaderNavigation aria-label="Jacob [Alspaw]">
-                <HeaderMenuItem {...getLinkProps('main-link', paths.HOME)}>About</HeaderMenuItem>
-                <HeaderMenuItem {...getLinkProps('main-link', paths.EXPERIENCE)}>Experience</HeaderMenuItem>
-                <HeaderMenuItem {...getLinkProps('main-link', paths.RESUME)}>Resume</HeaderMenuItem>
-                <HeaderMenuItem {...getLinkProps('main-link', paths.CONTACT)}>Contact</HeaderMenuItem>
+                <HeaderMenuItem {...getLinkProps('main-link', currentPath, paths.HOME)}>About</HeaderMenuItem>
+                <HeaderMenuItem {...getLinkProps('main-link', currentPath, paths.EXPERIENCE)}>Experience</HeaderMenuItem>
+                <HeaderMenuItem {...getLinkProps('main-link', currentPath, paths.RESUME)}>Resume</HeaderMenuItem>
+                <HeaderMenuItem {...getLinkProps('main-link', currentPath, paths.CONTACT)}>Contact</HeaderMenuItem>
               </HeaderNavigation>
               <HeaderGlobalBar>
                 {!isMobile && ([
@@ -111,10 +112,10 @@ const App = () => (
               >
                 <SideNavItems>
                   <HeaderSideNavItems>
-                    <HeaderMenuItem {...getLinkProps('side-link', paths.HOME)}>About</HeaderMenuItem>
-                    <HeaderMenuItem {...getLinkProps('side-link', paths.EXPERIENCE)}>Experience</HeaderMenuItem>
-                    <HeaderMenuItem {...getLinkProps('side-link', paths.RESUME)}>Resume</HeaderMenuItem>
-                    <HeaderMenuItem {...getLinkProps('side-link', paths.CONTACT)}>Contact</HeaderMenuItem>
+                    <HeaderMenuItem {...getLinkProps('side-link', currentPath, paths.HOME)}>About</HeaderMenuItem>
+                    <HeaderMenuItem {...getLinkProps('side-link', currentPath, paths.EXPERIENCE)}>Experience</HeaderMenuItem>
+                    <HeaderMenuItem {...getLinkProps('side-link', currentPath, paths.RESUME)}>Resume</HeaderMenuItem>
+                    <HeaderMenuItem {...getLinkProps('side-link', currentPath, paths.CONTACT)}>Contact</HeaderMenuItem>
                   </HeaderSideNavItems>
                 </SideNavItems>
               </SideNav>

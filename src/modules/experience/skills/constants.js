@@ -261,6 +261,12 @@ export const devPractices = [{
 }, {
   displayText: 'Backlog grooming',
   imagePath: `${skillsPath}/DevelopmentGeneral.svg`
+}, {
+  displayText: 'Microservices',
+  imagePath: `${skillsPath}/DevelopmentGeneral.svg`
+}, {
+  displayText: 'Monolithic applications',
+  imagePath: `${skillsPath}/DevelopmentGeneral.svg`
 }];
 
 export const other = [{

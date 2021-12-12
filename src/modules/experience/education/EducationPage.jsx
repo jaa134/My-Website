@@ -41,11 +41,15 @@ const EducationPage = () => (
             alt="CWRU logo"
           />
         </Link>
-        <div className={bem(['uni-row', 'graduation'])}>Graduated in spring 2019, Cum Laude</div>
+        <div className={bem(['uni-row', 'graduation'])}>
+          Graduated in spring 2019, Cum Laude
+        </div>
         <div className={bem(['uni-row', 'degree'])}>
           B.S. in computer science<span className={bem('gpa')}>(3.634 / 4.0)</span>
         </div>
-        <div className={bem(['uni-row', 'intent'])}>Intent for software engineering in industry</div>
+        <div className={bem(['uni-row', 'intent'])}>
+          Intent for software engineering in industry
+        </div>
       </div>
       <div className={bem('uni-spacer')} />
       <div className={bem('uni-info', 'UCT')}>
@@ -69,8 +73,12 @@ const EducationPage = () => (
             IES Study Abroad
           </Link> program in South Africa
         </div>
-        <div className={bem(['uni-row', 'attendance'])}>Attended in spring 2017</div>
-        <div className={bem(['uni-row', 'intent'])}>Studied humanities and environmental sciences</div>
+        <div className={bem(['uni-row', 'attendance'])}>
+          Attended in spring 2017
+        </div>
+        <div className={bem(['uni-row', 'intent'])}>
+          Studied humanities and environmental sciences
+        </div>
       </div>
     </div>
     <DataTable headers={headerData} rows={rowData} isSortable>
