@@ -117,7 +117,7 @@ const EducationPage = () => (
           <Table {...getTableProps()} size="lg">
             <TableHead>
               <TableRow>
-                <TableExpandHeader enableExpando {...getExpandHeaderProps()} />
+                <TableExpandHeader enableToggle {...getExpandHeaderProps()} />
                 {headers.map((header) => (
                   <TableHeader {...getHeaderProps({ header })}>
                     {header.header}
