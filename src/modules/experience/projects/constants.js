@@ -1,6 +1,7 @@
 import { tagTypes } from '../../../constants';
 
 const projects = {
+  TRAVEL_APP: 'Planet Planner',
   WEBSITE: 'My website',
   CWRUDED: 'CWRUded',
   SYNCHRONY: 'Synchrony',
@@ -46,6 +47,14 @@ export const headerData = [{
 }];
 
 export const rowData = [{
+  id: projects.TRAVEL_APP,
+  name: projects.TRAVEL_APP,
+  started: 1639980000,
+  finished: 1640412000,
+  status: statuses.COMPLETE,
+  description: 'A simple travel app featuring API traversal, favoriting, random navigation, and interactive 3D models. ',
+  isFavorite: true
+}, {
   id: projects.WEBSITE,
   name: projects.WEBSITE,
   started: 1635789600,
@@ -176,6 +185,73 @@ export const rowData = [{
 }];
 
 export const rowDataExtended = {
+  [projects.TRAVEL_APP]: {
+    startedDisplayText: 'December, 2021',
+    finishedDisplayText: 'December, 2021',
+    outline: 'A serverless, React website that I designed and implemented in my free time. It takes advantage of a free API to help users plan international travel. Features include API traversal using page routing or GraphiQL playground, favoriting items with localStorage persistence, exploration through random page navigation, and an interactive 3D model of Earth for virtual touring. This website is meant to showcase my talents as a UI/UX specialist. It utilizes the Material UI design system to specify design guidelines and define reusable components. The website is hosted by Hostinger, protected by Cloudfare from threat of DDoS, and uses Cloudfare as a CDN. Code style is enforced through use of ESlint linter. Packages are managed using Yarn.',
+    tags: [{
+      name: 'JavaScript',
+      type: tagTypes.LANGUAGE
+    }, {
+      name: 'HTML',
+      type: tagTypes.LANGUAGE
+    }, {
+      name: 'CSS',
+      type: tagTypes.LANGUAGE
+    }, {
+      name: 'React',
+      type: tagTypes.TECHNOLOGY
+    }, {
+      name: 'Apollo',
+      type: tagTypes.TECHNOLOGY
+    }, {
+      name: 'Cesium',
+      type: tagTypes.TECHNOLOGY
+    }, {
+      name: 'ESLint',
+      type: tagTypes.TECHNOLOGY
+    }, {
+      name: 'Docker',
+      type: tagTypes.TECHNOLOGY
+    }, {
+      name: 'Webpack',
+      type: tagTypes.TECHNOLOGY
+    }, {
+      name: 'Babel',
+      type: tagTypes.TECHNOLOGY
+    }, {
+      name: 'Sass',
+      type: tagTypes.TECHNOLOGY
+    }, {
+      name: 'Jest',
+      type: tagTypes.TECHNOLOGY
+    }, {
+      name: 'Yarn',
+      type: tagTypes.TECHNOLOGY
+    }, {
+      name: 'Git',
+      type: tagTypes.TECHNOLOGY
+    }, {
+      name: 'Visual Studio Code',
+      type: tagTypes.TECHNOLOGY
+    }, {
+      name: 'Github',
+      type: tagTypes.SERVICE
+    }, {
+      name: 'Hostinger',
+      type: tagTypes.SERVICE
+    }, {
+      name: 'Cloudflare CDN',
+      type: tagTypes.SERVICE
+    }],
+    links: [{
+      displayText: 'Repository',
+      href: 'https://github.com/jaa134/TravelApp'
+    }, {
+      displayText: 'Demo',
+      href: 'http://planetplanner.jacob-alspaw.com'
+    }]
+  },
   [projects.WEBSITE]: {
     startedDisplayText: 'November, 2021',
     finishedDisplayText: '-',

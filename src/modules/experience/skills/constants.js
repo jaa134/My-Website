@@ -196,6 +196,10 @@ export const technologies = [{
   href: 'https://icomoon.io/',
   imagePath: `${skillsPath}/IcoMoon.svg`
 }, {
+  displayText: 'Cesium',
+  href: 'https://cesium.com/',
+  imagePath: `${skillsPath}/Cesium.svg`
+}, {
   displayText: 'Raspberry Pi',
   href: 'https://www.raspberrypi.org/',
   imagePath: `${skillsPath}/RaspberryPi.svg`
