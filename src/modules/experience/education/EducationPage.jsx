@@ -37,7 +37,7 @@ const EducationPage = () => (
           rel="noreferrer"
         >
           <img
-            src="images/CWRU_logo.svg"
+            src="static/images/education/CWRU_logo.svg"
             alt="CWRU logo"
           />
         </Link>
@@ -60,7 +60,7 @@ const EducationPage = () => (
           rel="noreferrer"
         >
           <img
-            src="images/UCT_logo.svg"
+            src="static/images/education/UCT_logo.svg"
             alt="UCT logo"
           />
         </Link>

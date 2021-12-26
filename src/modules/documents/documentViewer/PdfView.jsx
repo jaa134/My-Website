@@ -14,7 +14,7 @@ import PdfViewLoading from './PdfViewLoading';
 import PdfViewError from './PdfViewError';
 import './PdfView.scss';
 
-pdfjs.GlobalWorkerOptions.workerSrc = 'pdf.worker.min.js';
+pdfjs.GlobalWorkerOptions.workerSrc = 'static/js/pdf.worker.min.js';
 const getPdfSize = (availableWidth) => {
   const width = Math.min(availableWidth - PDF_PADDING, PDF_MAX_WIDTH);
   return { width, height: width * PDF_RATIO };
@@ -30,7 +30,7 @@ const PdfView = ({
   const onDocLoadError = () => {
     setHasError(true);
   };
-  const documentUrl = `documents/${docName}`;
+  const documentUrl = `static/documents/${docName}`;
   return (
     <div className={bem()}>
       <PdfViewToolbar documentUrl={documentUrl} numPages={numPages} />

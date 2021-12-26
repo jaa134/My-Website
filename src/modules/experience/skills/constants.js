@@ -1,4 +1,4 @@
-const skillsPath = 'images/skills';
+const skillsPath = 'static/images/skills';
 
 export const languages = [{
   displayText: 'JavaScript',

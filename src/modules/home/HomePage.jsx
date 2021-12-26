@@ -2,11 +2,11 @@ import React, { useCallback, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Gallery from 'react-photo-gallery';
 import Carousel, { Modal, ModalGateway } from 'react-images';
+import { paths } from '../../constants';
 import defineBlock from '../../utils/defineBlock';
 import PageBase from '../../common/PageBase';
 import { photos } from './constants';
 import './HomePage.scss';
-import { paths } from '../../constants';
 
 const bem = defineBlock('HomePage');
 

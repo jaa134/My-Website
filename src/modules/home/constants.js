@@ -17,7 +17,7 @@ export const interests = [
   'Video games'
 ];
 
-export const albumPath = 'images/album';
+export const albumPath = 'static/images/album';
 
 export const photos = [{
   src: `${albumPath}/7m2FbjvtBR.jpg`,
